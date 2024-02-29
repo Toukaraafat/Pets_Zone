@@ -1,3 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 /* Add this line to styles.css */
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import "@fortawesome/fontawesome-free/css/all.css";
+p{
+    color:#858687;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}

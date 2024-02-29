@@ -1,0 +1,60 @@
+footer {
+  background: url(../../assets/images/footer-bg.png);
+}
+footer figure img {
+  height: 100%;
+  width: 150px;
+  object-fit: contain;
+}
+
+.footer-title {
+  padding-left: 40px;
+  margin: 0;
+  color: #393d72;
+  font-weight: bold;
+}
+
+footer .footer-title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(
+    90deg,
+    rgb(129, 21, 255) 0px,
+    rgb(255, 42, 208) 50%,
+    rgb(255, 143, 42) 100%
+  );
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+footer li {
+  padding-bottom: 15px;
+}
+
+footer .copy {
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+footer .copy p a {
+    background: linear-gradient(
+      90deg,
+      rgb(129, 21, 255) 0px,
+      rgb(255, 42, 208) 50%,
+      rgb(255, 143, 42) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+footer * a:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(129, 21, 255) 0px,
+    rgb(255, 42, 208) 50%,
+    rgb(255, 143, 42) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
