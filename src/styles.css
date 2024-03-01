@@ -1,15 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
 /* Add this line to styles.css */
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
 @import "@fortawesome/fontawesome-free/css/all.css";
-p{
-    color:#858687;
+@import "aos/dist/aos.css";
+p {
+  color: #858687;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-    color: inherit;
+  color: inherit;
+}
+.btn {
+  padding: 0.65rem 0.75rem;
+  box-shadow: none;
+  border: none;
+  background-color: #ff4880;
+  color: #fff;
+  border-radius: 0.75rem;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn .svg-inline--fa {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  color: #fff;
+  outline: 0;
+  border: none;
+  background-color: #ffae00;
+}
+.icon svg {
+  width: 5rem;
+  height: 1rem;
+  color: #ff4880;
+}
+.title {
+  color: #393d72;
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+.sec-color {
+  color: #ff4880;
+}
+.main-color {
+  color: #393d72;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  line-height: 2.3;
 }

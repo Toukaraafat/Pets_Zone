@@ -3,7 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
-
+import AOS from "aos";
+AOS.init();
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,5 @@ import { SliderComponent } from './slider/slider.component';
 })
 export class AppComponent {
   title = 'Pets_Zone';
+  
 }
