@@ -47,6 +47,7 @@
 .event-title {
   font-weight: 800;
   transition: all 0.3s ease-in-out;
+  color: #393d72;
 }
 
 .event .see {
