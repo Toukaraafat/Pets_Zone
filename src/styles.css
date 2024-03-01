@@ -8,6 +8,7 @@
 @import "aos/dist/aos.css";
 p {
   color: #858687;
+  line-height: 1.8;
 }
 a {
   text-decoration: none;
