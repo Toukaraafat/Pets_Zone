@@ -22,8 +22,11 @@
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@popperjs/core": "^2.11.8",
+    "angular-ui-carousel": "^0.1.10",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "ngx-owl-carousel-o": "^17.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

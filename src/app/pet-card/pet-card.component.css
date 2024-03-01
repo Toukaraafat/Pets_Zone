@@ -1,0 +1,12 @@
+.pet-img .svg-bg {
+    height: 150px;
+}
+.pet{
+    width: 150px;
+    height: 150px;
+}
+.item{
+    box-shadow: 3px 1px 18px 0 rgba(0,0,0,.09);
+    background: #fff;
+    border-radius: 15px;
+}

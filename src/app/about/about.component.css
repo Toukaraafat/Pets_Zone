@@ -2,10 +2,9 @@
   background: url("../../assets/images/about-bg.jpg") no-repeat center;
 }
 
-.about-img svg {
+.about-img .svg-bg {
   width: 100%;
   height: 500px;
-  fill: #f0ece8;
   object-fit: cover;
   border-radius: 15rem;
 }

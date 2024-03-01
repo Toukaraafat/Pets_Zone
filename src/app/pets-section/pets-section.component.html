@@ -1,0 +1,70 @@
+<section class="pets-sec p-sm-5 p-4">
+  <h2 class="title text-center">Our Community
+  </h2>
+  <div class="icon text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 53 7" xml:space="preserve">
+          <g class="nc-icon-wrapper">
+              <path class="st0"
+                  d="M0 2.59h.44c.77 0 2.82-2.67 4.58.96 1.23 2.53 3.66 2.4 5.31 0 1.65-2.4 4.26-2.7 6.53 0 1.67 1.99 3.83 2.86 5.53 0 .45-.75 3-3.96 6.03 0 3.17 4.15 5.83 0 5.83 0s2.68-4.33 5.86 0c3.02 4.11 5.25 0 5.25 0s2.31-4.32 5.12 0C51.2 4.64 53 4.56 53 4.56"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="100"></path>
+          </g>
+      </svg>
+  </div>
+<owl-carousel-o [options]="customOptions" class="row m-0 py-4 px-4 ">
+  <ng-template carouselSlide class="col-lg-3 col-sm-6">
+    <app-pet-card></app-pet-card>
+  </ng-template>
+  <ng-template carouselSlide class="col-lg-3 col-sm-6">
+    <app-pet-card></app-pet-card>
+  </ng-template>
+  <ng-template carouselSlide class="col-lg-3 col-sm-6">
+    <app-pet-card></app-pet-card>
+  </ng-template>
+  <ng-template carouselSlide class="col-lg-3 col-sm-6">
+    <app-pet-card></app-pet-card>
+  </ng-template>
+  <ng-template carouselSlide class="col-lg-3 col-sm-6">
+    <app-pet-card></app-pet-card>
+  </ng-template>
+</owl-carousel-o>
+</section>
+<!-- @if (images) {
+	<ngb-carousel>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[0]" alt="Random first slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>10 seconds between slides...</h3>
+				<p>This carousel uses customized default values.</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[1]" alt="Random second slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>No mouse events...</h3>
+				<p>This carousel doesn't pause or resume on mouse events</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[2]" alt="Random third slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>No keyboard...</h3>
+				<p>This carousel uses customized default values.</p>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+				<img [src]="images[3]" alt="Random fourth slide" />
+			</div>
+			<div class="carousel-caption">
+				<h3>And no wrap after last slide.</h3>
+				<p>This carousel uses customized default values.</p>
+			</div>
+		</ng-template>
+	</ngb-carousel>
+} -->
