@@ -6,11 +6,27 @@
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 @import "aos/dist/aos.css";
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4880;
+  border-radius: 2.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffae00;
+}
+
 body {
   font-family: "Amaranth", sans-serif;
 
 }
-
 p {
   color: #858687;
   line-height: 1.8;

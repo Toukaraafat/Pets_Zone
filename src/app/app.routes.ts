@@ -8,6 +8,7 @@ import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { AccountComponent } from './account/account.component';
 import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
+import { PetsPageComponent } from './pets-page/pets-page.component';
 
 export const routes: Routes = [
   {
@@ -27,17 +28,27 @@ export const routes: Routes = [
   },
   {
     path: 'shop',
-    component: LoginComponent,
+    component: ShopComponent,
     title: 'Shop',
   },
   {
+    path: 'pets',
+    component: PetsPageComponent,
+    title: 'Pets',
+  },
+  {
+    path: 'blogs',
+    component: BlogsPageComponent,
+    title: 'Community',
+  },
+  {
     path: 'account',
-    component: LoginComponent,
+    component: AccountComponent,
     title: 'Account',
   },
   {
     path: 'cart',
-    component: LoginComponent,
+    component: CartComponent,
     title: 'Cart',
   },
   {
