@@ -22,6 +22,8 @@ export class PetsSectionComponent {
     margin: 30,
     autoHeight: true,
     autoWidth: true,
+    autoplaySpeed: 2000,
+    autoplayTimeout: 3500,
     responsive: {
       0: {
         items: 1,

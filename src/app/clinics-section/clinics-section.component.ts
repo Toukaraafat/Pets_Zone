@@ -4,17 +4,20 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-clinics-section',
   standalone: true,
-  imports: [CarouselModule ],
+  imports: [CarouselModule],
   templateUrl: './clinics-section.component.html',
-  styleUrl: './clinics-section.component.css'
+  styleUrl: './clinics-section.component.css',
 })
 export class ClinicsSectionComponent {
   customOptions: OwlOptions = {
+    items: 3,
     loop: true,
     autoplay: true,
     dots: true,
     autoHeight: true,
     autoWidth: true,
+    autoplaySpeed: 1000,
+    autoplayTimeout: 3000,
     responsive: {
       0: {
         items: 2,
@@ -24,9 +27,7 @@ export class ClinicsSectionComponent {
       },
       1000: {
         items: 5,
-      }
-    }
-  }
-
-
+      },
+    },
+  };
 }

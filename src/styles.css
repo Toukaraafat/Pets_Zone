@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 /* Add this line to styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "@fortawesome/fontawesome-free/css/all.css";
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 @import "aos/dist/aos.css";
+body {
+  font-family: "Amaranth", sans-serif;
+
+}
+
 p {
   color: #858687;
   line-height: 1.8;
@@ -19,7 +24,7 @@ a:hover {
   color: inherit;
 }
 .btn {
-  padding: 0.65rem 0.75rem;
+  padding: 0.65rem 1.5rem;
   box-shadow: none;
   border: none;
   background-color: #ff4880;
@@ -67,9 +72,10 @@ ul {
 ul li {
   line-height: 2.3;
 }
-.svg-bg{
+.svg-bg {
   fill: #f0ece8;
 }
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
-  background:#ff4880 ;
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #ff4880;
 }

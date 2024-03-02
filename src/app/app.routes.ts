@@ -11,26 +11,20 @@ export const routes: Routes = [
     component: HomeComponent,
     title: 'Home',
   },
-  { path: 'Register',
-  component: RegisterComponent,
-  title: 'register',
-},
-{
-  path: 'login',
-  component: LoginComponent,
-  title: 'Login',
-},
+  { path: 'register', component: RegisterComponent, title: 'register' },
+  {
+    path: 'login',
+    component: LoginComponent,
+    title: 'Login',
+  },
 
   {
     path: '**',
     component: NotFoundComponent,
   },
-  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-

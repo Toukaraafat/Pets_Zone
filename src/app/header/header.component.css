@@ -15,7 +15,10 @@ img {
   box-shadow: 0 0 10px #00000029;
 }
 .nav-link{
-  text-transform: uppercase;
+  text-transform: capitalize;
   color:#393d72;
   font-weight: 700;
+}
+.active_link {
+  color: #ff4880;
 }
