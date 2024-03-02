@@ -1,6 +1,6 @@
 <nav class="navbar  navbar-expand-lg bg-white sticky-top navbar-light p-0">
   <div class="contain px-sm-5 px-4">
-    <a href="#" class="navbar-brand">
+    <a routerLink="/" class="navbar-brand">
       <img src="../../assets/images/logo.png" alt="petszone">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -13,31 +13,28 @@
           <a class="nav-link mx-2" routerLink="/" routerLinkActive="active_link"
           [routerLinkActiveOptions]="{ exact: true }">home</a>
         </li>
-        <li class="nav-item dropdown ">
-          <a class="nav-link mx-2 dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Shop
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-            <a class="dropdown-item" routerLink="#">Products</a>
-            <a class="dropdown-item" routerLink="#">Clinics</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="/shop" routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }">Shop</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-2" routerLink="#">Donation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="#">Community</a>
+          <a class="nav-link mx-2" routerLink="/blogs" routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }">Community</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link mx-2" routerLink="/register">SignUp</a>
+          <a class="nav-link mx-2" routerLink="/register" routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }">SignUp</a>
         </li>
       </ul>
-      <a class="nav-link mx-2" routerLink="#">
+      <a class="nav-link mx-2" routerLink="/cart" routerLinkActive="active_link"
+      [routerLinkActiveOptions]="{ exact: true }">
         <i class="fa-solid fa-paw sec-color"></i> Cart
       </a>
-      <a class="nav-link mx-2 " routerLink="#">
+      <a class="nav-link mx-2 " routerLink="/account" routerLinkActive="active_link"
+      [routerLinkActiveOptions]="{ exact: true }">
         <i class="fa-solid fa-circle-user me-1 sec-color"></i> Account
       </a>
     </div>
