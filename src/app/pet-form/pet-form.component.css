@@ -1,3 +1,12 @@
 .form-floating > textarea.form-control{
     height: 150px;
 }
+.form-control:focus {
+    border-color: #ff4880;
+    outline: 0;
+    box-shadow: none;
+}
+label{
+    color: #393d72!important;
+
+}
