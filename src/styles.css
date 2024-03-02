@@ -46,15 +46,17 @@ a:hover {
   color: #fff;
   border-radius: 0.75rem;
 }
-
-.btn:focus {
+.btn-2 {
+  padding: 0.65rem 1.5rem;
+  box-shadow: none;
+  border: none;
+  background-color: #ffae00;
+  color: #fff;
+  border-radius: 0.75rem;
+}
+.btn:focus ,.btn-2:focus{
   outline: 0;
   box-shadow: none;
-}
-
-.btn .svg-inline--fa {
-  vertical-align: middle;
-  margin-left: 10px;
 }
 
 .btn:hover {
@@ -62,6 +64,12 @@ a:hover {
   outline: 0;
   border: none;
   background-color: #ffae00;
+}
+.btn-2:hover {
+  color: #fff;
+  outline: 0;
+  border: none;
+  background-color: #ff4880;
 }
 .icon svg {
   width: 5rem;
@@ -80,6 +88,9 @@ a:hover {
 .main-color {
   color: #393d72;
 }
+.orange-color{
+  color: #ffae00;
+}
 ul {
   list-style: none;
   padding-left: 0;
@@ -93,4 +104,12 @@ ul li {
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #ff4880;
+}
+.fixed-btn{
+  position: fixed;
+  bottom: 0;
+  right: 1%;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  z-index: 1111;
 }

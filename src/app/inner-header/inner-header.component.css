@@ -1,0 +1,55 @@
+.inner-header figure {
+  margin: 0;
+  position: relative;
+}
+
+.inner-header figure img {
+  height: 235px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.inner-header figure figcaption {
+  position: absolute;
+  padding: 20px;
+  right: 15%;
+  left: 15%;
+  bottom: 20%;
+  z-index: 1;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-shadow: 0 3px 20px rgba(0,0,0,.9); */
+}
+
+.inner-header figure figcaption .breadcrumb-item {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #393d72;
+}
+
+.inner-header figure figcaption h2 {
+  color: #393d72;
+  font-weight: 900;
+}
+
+.inner-header figure figcaption .breadcrumb-item a {
+  padding: 0 5px;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+}
+
+.inner-header figure figcaption .breadcrumb-item a:hover {
+  color: #ff4880;
+}
+
+.inner-header figure figcaption .breadcrumb-item.active {
+  color: #ff4880;
+}
+
+.inner-header figure figcaption .breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}

@@ -10,6 +10,7 @@ import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
 import { PetsPageComponent } from './pets-page/pets-page.component';
 import { ClinicsPageComponent } from './clinics-page/clinics-page.component';
+import { PetFormComponent } from './pet-form/pet-form.component';
 
 export const routes: Routes = [
   {
@@ -56,6 +57,11 @@ export const routes: Routes = [
     path: 'cart',
     component: CartComponent,
     title: 'Cart',
+  },
+  {
+    path: 'pet-form',
+    component: PetFormComponent,
+    title: 'Pet-Form',
   },
   {
     path: '**',

@@ -1,13 +1,13 @@
 video {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   object-fit: cover;
 }
 .intro {
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
-.intro::before {
+/* .intro::before {
   position: absolute;
   content: "";
   background: #0a0a0a30;
@@ -17,7 +17,7 @@ video {
   top: 0;
   bottom: 0;
   right: 0;
-}
+} */
 .intro::after {
   position: absolute;
   content: "";
