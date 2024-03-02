@@ -1,107 +1,110 @@
-<div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 half-bg">
-                <h1 style="color: #011939d0;">New Here!</h1>
-                <h2 style="color: #493706d0;"> Join our community and register for your own profile. </h2>
-                
-                      <img src="../../assets/images/dog.png" alt="" class="img-responsive">
-            
-            </div>
+<section class="inner-header">
+  <figure>
+    <img src="../../assets/images/bg-breadcrumb.jpg" alt="breadcrumb">
+    <figcaption>
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ul class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item active">SignUp </li>
+        </ul>
+      </nav>
+    </figcaption>
+  </figure>
+</section>
 
-            <div class="col-md-6 registration-form">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9 col-md-offset-2">
-                            <div class="card text-right">
-      
-                                <img src="../../assets/images/animal.jpeg" class="card-img-top" >
-                              </div>
-                            <form role="form">
-                                <form role="form">
-                                    <div class="form-group">
-                                      <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input type="text" class="form-control input-lg" placeholder="First Name">
-                                      </div>
-                                    </div>
-                            
-                                    <div class="form-group">
-                                      <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input type="text" class="form-control input-lg" placeholder="Last Name">
-                                      </div>
-                                    </div>
-                            
-                                    <div class="form-group">
-                                      <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="email" class="form-control input-lg" placeholder="Email Address">
-                                      </div>
-                                    </div>
-                            
-                                    <div class="row">
-                                      <div class="col-md-6">
-                                        <div class="form-group">
-                                          <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
-                                            <select class="form-control input-lg" placeholder="Gender">
-                                              <option value="" selected disabled>Gender</option>
-                                              <option value="male">Male</option>
-                                              <option value="female">Female</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                      </div>
-                            
-                                      <div class="col-md-6">
-                                        <div class="form-group">
-                                          <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-                                            <select class="form-control input-lg" placeholder="Country">
-                                              <option value="" selected disabled>Country</option>
-                                              <option value="usa">USA</option>
-                                              <option value="canada">Canada</option>
-                                              <option value="uk">UK</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                            
-                                    <div class="row">
-                                      <div class="col-md-6">
-                                        <div class="form-group">
-                                          <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                            <input type="password" class="form-control input-lg" placeholder="Password">
-                                          </div>
-                                        </div>
-                                      </div>
-                            
-                                      <div class="col-md-6">
-                                        <div class="form-group">
-                                          <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-remove"></i></span>
-                                            <input type="password" class="form-control input-lg" placeholder="Confirm Password">
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                            
-                                    <hr class="colorgraph">
-                            
-                                    <div class="text-center">
-                                      <a class="text-info fw-lighter fs-6" href="sign.html">Already Have An Account?</a><br><br>
-                                      <button class="btn " type="button">Register</button>
-                                    </div>
-                                  </form>
-                            </form>
-                        </div>
+<section class="vh-70">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block" style="background-color: rgb(233, 222, 207);">
+              <img src="../../assets/images/dog.png" alt="login form" class="img-fluid"
+                style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form>
+
+                  <div class="d-flex align-items-center mb-3 ">
+                    <img src="../../assets/images/logo.png" alt="Logo" style="height: auto; width: 10vw;">
+                  </div>
+
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-outline">
+                        <!-- <label class="form-label">First Name</label> -->
+                        <input type="text" class="form-control form-control-md mb-3" placeholder="First name" />
+                      </div>
                     </div>
-                </div>
+                    <div class="col-md">
+                      <div class="form-outline">
+                        <!-- <label class="form-label">Last Name</label> -->
+                        <input type="text" class="form-control form-control-md mb-3" placeholder="Last name" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-3">
+                    <!-- <label class="form-label">Email address</label> -->
+                    <input type="email" class="form-control form-control-md" placeholder="Email"/>
+                  </div>
+
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-outline mb-1">
+                        <!-- <label class="form-label" for="form2Example27">Password</label> -->
+                        <input type="password" id="form2Example27" class="form-control form-control-md mb-3" placeholder="Password" />
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-outline mb-1">
+                        <!-- <label class="form-label">Confirm Password</label> -->
+                        <input type="password" class="form-control form-control-md mb-3" placeholder="Confirm password"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-outline mb-1">
+                        <!-- <label class="form-label">Gender</label> -->
+                        <select class="form-select form-select-md" aria-label="Gender" >
+                         
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-outline mb-1">
+                        <!-- <label class="form-label">Country</label> -->
+                        <select class="form-select form-select-md" aria-label="Country">
+                          <option selected>Egypt</option>
+                          <option value="us">United States</option>
+                          <option value="uk">United Kingdom</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pt-2 mb-1">
+                    <button class="btn btn-dark btn-lg btn-block" type="button">Sign Up</button>
+                  </div>
+
+                  <a class="small text-muted" href="#!">Already have an account? 
+                    <a routerLink="/login" routerLinkActive="active_link"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                      style="color: #d809b6;">Login Here</a></a>
+                  
+                </form>
+
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
-    
-
+  </div>
+</section>
