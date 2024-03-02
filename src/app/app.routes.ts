@@ -9,6 +9,7 @@ import { AccountComponent } from './account/account.component';
 import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
 import { PetsPageComponent } from './pets-page/pets-page.component';
+import { ClinicsPageComponent } from './clinics-page/clinics-page.component';
 
 export const routes: Routes = [
   {
@@ -40,6 +41,11 @@ export const routes: Routes = [
     path: 'blogs',
     component: BlogsPageComponent,
     title: 'Community',
+  },
+  {
+    path: 'clinics',
+    component: ClinicsPageComponent,
+    title: 'Clinics',
   },
   {
     path: 'account',
