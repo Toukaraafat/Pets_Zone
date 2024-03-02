@@ -1,48 +1,62 @@
-]<div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 half-bg">
-                <h1 style="color: #011939d0;">New Here!</h1>
-                <h2 style="color: #493706d0;"> Join our community and register for your own profile. </h2>
-<img src="../../assets/images/dog.png" alt="">
-            </div>
+<section class="inner-header">
+  <figure>
+    <img src="../../assets/images/bg-breadcrumb.jpg" alt="breadcrumb">
+    <figcaption>
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ul class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item active">SignUp </li>
+        </ul>
+      </nav>
+    </figcaption>
+  </figure>
+</section>
 
-            <div class="col-md-6 registration-form">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9 col-md-offset-2">
-                            <div class="card text-right">
-      
-                                <img src="../../assets/images/animal.jpeg" class="card-img-top" >
-                              </div>
-                            <form role="form">
-                                <form role="form">
-                                   
-                            
-                                    <div class="form-group">
-                                      <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="email" class="form-control input-lg" placeholder="Email Address">
-                                      </div>
-                                    </div>
-                            
-                                    <div class="form-group">
-                                      <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input type="password" class="form-control input-lg" placeholder="Password">
-                                      </div>
-                                    </div>
-                            
-                                    <hr class="colorgraph">
-                            
-                                    <div class="text-center">
-                                      <a class="text-info fw-lighter fs-6" href="new.html">Create An Account?</a><br><br>
-                                      <button class="btn " type="button">Login</button>
-                                    </div>
-                                  </form>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+<section class="vh-70">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block" style="background-color: rgb(233, 222, 207);">
+              <img src="../../assets/images/dog.png" alt="login form" class="img-fluid"
+                style="border-radius: 1rem 0 0 1rem;" />
             </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form>
+
+                  <div class="d-flex align-items-center mb-3 ">
+                    <img src="../../assets/images/logo.png" alt="Logo" style="height: auto; width: 10vw;">
+                  </div>
+
+                  <div class="form-outline mb-1">
+                    <!-- <label class="form-label">Email address</label> -->
+                    <input type="email" class="form-control form-control-md mb-3" placeholder="Email" />
+                  </div>
+
+                  <div class="form-outline mb-1">
+                    <!-- <label class="form-label" for="form2Example27">Password</label> -->
+                    <input type="password" id="form2Example27" class="form-control form-control-md mb-3" placeholder="Password"/>
+                  </div>
+
+                  <div class="pt-2 mb-3">
+                    <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                  </div>
+
+                  <a class="small text-muted mb-3" href="#!">Forgot password?</a>
+                  <p class="mb-5 pb-lg-2" style="color: #2a2e5d;">Don't have an account? <a routerLink="/register" routerLinkActive="active_link"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                      style="color: #d809b6;">Register here</a></p>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</section>
