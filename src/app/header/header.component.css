@@ -1,4 +1,21 @@
 img {
-    max-width: 10%;
-    height: auto;
+    /* max-width: 10%;
+    height: auto; */
+    height: 100%;
+    width: 115px;
   }
+  .contain{
+    display: flex;
+    flex-wrap: inherit;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+.navbar{
+  box-shadow: 0 0 10px #00000029;
+}
+.nav-link{
+  text-transform: uppercase;
+  color:#393d72;
+  font-weight: 700;
+}

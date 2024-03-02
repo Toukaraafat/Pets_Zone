@@ -13,12 +13,11 @@ export class ClinicsSectionComponent {
     loop: true,
     autoplay: true,
     dots: true,
-    margin: 15,
     autoHeight: true,
     autoWidth: true,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
       600: {
         items: 3,

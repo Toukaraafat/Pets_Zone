@@ -1,9 +1,28 @@
 .clinic-img .svg-bg {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-  .image{
-    height: 135px;
-    width: 200px;
-  }
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.image {
+  height: 135px;
+  width: 200px;
+}
+.clinics-logos .item {
+  height: 125px;
+  width: 200px;
+  overflow: hidden;
+  padding: 10px;
+  /* background-color: #f0ece8; */
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin: 1rem auto;
+}
+.clinics-logos img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  margin: auto;
+  transition-duration: 0.25s;
+}
