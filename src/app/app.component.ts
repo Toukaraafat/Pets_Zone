@@ -7,6 +7,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { ShopSectionComponent } from './shop-section/shop-section.component';
+import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.component';
+import { PopupComponent} from './popup/popup.component';
 import AOS from 'aos';
 AOS.init();
 
@@ -21,7 +23,9 @@ AOS.init();
     RegisterComponent,
     LoginComponent,
     TopHeaderComponent,
-    ShopSectionComponent
+    ShopSectionComponent,
+    SinglePetInfoComponent,
+    PopupComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
