@@ -12,7 +12,9 @@ import { PetsPageComponent } from './pets-page/pets-page.component';
 import { ClinicsPageComponent } from './clinics-page/clinics-page.component';
 import { PetFormComponent } from './pet-form/pet-form.component';
 import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.component';
-
+import { SingleClinicComponent } from './single-clinic/single-clinic.component';
+import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { SingleProductComponent } from './single-product/single-product.component';
 export const routes: Routes = [
   {
     path: '',
@@ -68,6 +70,27 @@ export const routes: Routes = [
     path: 'pet-form',
     component: PetFormComponent,
     title: 'Pet-Form',
+  },
+  {
+    path: 'pet-info',
+    component: SinglePetInfoComponent,
+    title: 'Pet-info',
+  },
+  {
+    path: 'blog',
+    component: SingleBlogComponent,
+    title: 'blog',
+  },
+  {
+    path: 'clinic',
+    component: SingleClinicComponent,
+    title: 'clinic',
+
+  },
+  {
+    path: 'product',
+    component: SingleProductComponent,
+    title: 'Product',
   },
   {
     path: '**',
