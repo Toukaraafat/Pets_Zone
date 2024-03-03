@@ -15,10 +15,13 @@
       </svg>
      </div>
       <div class="content">
-        <h3 class="py-3 main-color"><a href="#">Husky dog</a></h3>
+        <h3 class="py-3 main-color"><a routerLink="/singlepet" routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }">Husky dog</a></h3>
+          
         <p>We provide the most responsive and functional IT design for
           companies and businesses worldwide.</p>
-        <a href="#" class="btn">
+        <a  class="btn" routerLink="/singlepet" routerLinkActive="active_link"
+        [routerLinkActiveOptions]="{ exact: true }">
           View Pet
         </a>
       </div>

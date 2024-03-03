@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { PetsPageComponent } from './pets-page/pets-page.component';
 import { ClinicsPageComponent } from './clinics-page/clinics-page.component';
 import { PetFormComponent } from './pet-form/pet-form.component';
+import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,11 @@ export const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
     title: 'register',
+  },
+  {
+    path: 'singlepet',
+    component: SinglePetInfoComponent,
+    title: 'singlepet',
   },
   {
     path: 'login',
@@ -63,6 +69,7 @@ export const routes: Routes = [
     component: PetFormComponent,
     title: 'Pet-Form',
   },
+ 
   {
     path: '**',
     component: NotFoundComponent,
