@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { PetsPageComponent } from './pets-page/pets-page.component';
 import { ClinicsPageComponent } from './clinics-page/clinics-page.component';
 import { PetFormComponent } from './pet-form/pet-form.component';
+import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.component';
 
 export const routes: Routes = [
   {
