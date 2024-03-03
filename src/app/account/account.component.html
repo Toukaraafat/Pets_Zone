@@ -1,73 +1,82 @@
-<section class="bg-light">
-    <div class="container">
-<div class="row">
-    <div class="col-lg-11 mb-4 mb-sm-5 m-lg-5">
-<div class="card card-style1 border-0">
-    <div class="card-body  p-sm-2-3 p-md-6 p-lg-7">
-<div class="row align-items-center">
-    
+<section class="p-sm-5 p-4">
+    <div class="row m-0">
+        <div class="col-lg-4 user">
+            <div class=" p-4">
+                <figure class="user-img">
+                    <img src="../../assets/images/user.png" alt="">
+                    <figcaption>
+                        <h4 class="main-color mt-3">User name</h4>
+                    </figcaption>
+                </figure>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <strong class="main-color ">Email:</strong> edithmail.com
+                    </li>
+                    <li class="mb-2">
+                        <strong class="main-color ">Gender:</strong> Female
+                    </li>
+                    <li class="mb-2">
+                        <strong class="main-color ">Country:</strong> Egypt
+                    </li>
+                </ul>
+                <div class="pt-2 mb-3">
+                    <button class="btn" type="button">Edit</button>
+                </div>
+            </div>
 
-    <div class="col-lg-5  about-img" data-aos="fade-right">
-    
-        <svg viewBox="0 0 150 150" class="svg-bg">
-            <clipPath id="clippath_65e1cc4d6bf2a">
-                <path d="M92.29,0.96c-13.42,0-24.28,2.68-32.87,7.26c-11.16,5.95-22.49,11.6-34.3,16.12C10.49,29.94,0,44.09,0,60.78
-            c0,14.97,8.41,27.86,20.65,34.4c14.1,7.54,27.78,15.84,40.45,25.59c7.48,5.75,16.11,9.19,25.45,9.19
-            c29.66,0,59.44-45.84,59.44-75.43C146,24.95,121.95,0.96,92.29,0.96z"></path>
-            </clipPath>
-            <g>
-                <path d="M128.26,106.04c-5.76-17.88-8.15-36.6-7.5-55.37c1.09-31.3-31.8-46.55-38.41-48.23c-29.2-7.45-56.72,11.91-62.03,39.29c-1.45,7.46-4.47,14.53-9.17,20.5c-4.82,6.11-8.31,13.45-9.91,21.71c-5.25,27.03,11.9,52.96,38.77,58.9c4.34,0.96,8.64,1.33,12.82,1.17c12.43-0.46,24.81,1.2,36.93,3.99c3.18,0.73,6.53,1,9.99,0.73c16.23-1.27,29.19-14.62,30.03-30.89C130,113.7,129.44,109.73,128.26,106.04z"></path>
-            </g>
-            <g clip-path="url(#clippath_65e1cc4d6bf2a)">
-                <image xlink:href="../../assets/images/profile.jpg" width="180" height="180"></image>
-            </g>
-        </svg>
-    </div>
+        </div>
+        <div class="col-lg-8">
+         
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <!-- <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-orders-tab" data-bs-toggle="pill" data-bs-target="#pills-orders" type="button" role="tab" aria-controls="pills-orders" aria-selected="true">Orders</button>
+                        </li> -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-pets-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-pets" type="button" role="tab" aria-controls="pills-pets"
+                                aria-selected="false"><i class="fa fa-paw sec-color" aria-hidden="true"></i> Pets
+                       
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-community-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-community" type="button" role="tab"
+                                aria-controls="pills-community" aria-selected="false"> <i class="fa fa-paw sec-color" aria-hidden="true"></i> Community
+                               
 
+                            </button>
+                        </li>
 
-    <div class="col-lg-6 px-sm-3">
-<div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-4 mb-1-9 rounded">
-    <h3 class="h4 text-white mb-0">First name</h3>
-</div>
-<ul class="list-unstyled mb-1-9">
-    <li class="mb-2 mb-xl-3 display-28">
-        <span class="display-26 text-secondary me-2  fs-5 font-weight-600">Email:</span> edithmail.com</li>
-    <li class="mb-2 mb-xl-3 display-28">
-        <span class="display-26 text-secondary me-2 fs-5 font-weight-600">Gender:</span> Female </li>
-    <li class="mb-2 mb-xl-3 display-28">
-        <span class="display-26 text-secondary me-2 fs-5 font-weight-600">Country:</span> Egypt</li>
-</ul>
-<div class="pt-2 mb-3">
-    <button class="btn btn-dark btn-lg btn-block" type="button">Edit</button>
-  </div>
+                    </ul>
+          
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- <div class="tab-pane fade show active" id="pills-orders" role="tabpanel" aria-labelledby="pills-orders-tab" tabindex="0">
+                    iiiiiiiiiii
+                </div> -->
+                        <div class="tab-pane fade show active" id="pills-pets" role="tabpanel"
+                            aria-labelledby="pills-pets-tab" tabindex="0">
+                            <div class="row m-0">
+                                <div class="col-md-6">
+                                    <app-pet-card></app-pet-card>
+                                </div>
+                                <div class="col-md-6">
+                                    <app-pet-card></app-pet-card>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-community" role="tabpanel"
+                            aria-labelledby="pills-community-tab" tabindex="0">
+                            <div class="row m-0">
+                                <div class="col-md-6">
+                                    <app-blog-card></app-blog-card>
+                                </div>
+                                <div class="col-md-6">
+                                    <app-blog-card></app-blog-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+        </div>
     </div>
-    
-</div>
-    </div>
-</div>
-    </div>
-    <div class="col-lg-12 mb-4 mb-sm-5">
-
-        <section class="pets-sec p-sm-5 p-4 ">
-            <div class="bg">
-                <h2 class="title text-center">Your Adopting 
-                </h2>
-                
-            <owl-carousel-o [options]="customOptions" class=" py-3 px-4 ">
-                <ng-template carouselSlide>
-                    <app-pet-card></app-pet-card>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <app-pet-card></app-pet-card>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <app-pet-card></app-pet-card>
-                </ng-template>
-                <ng-template carouselSlide class="col-lg-3 col-sm-6">
-                    <app-pet-card></app-pet-card>
-                </ng-template>
-                <ng-template carouselSlide class="col-lg-3 col-sm-6">
-                    <app-pet-card></app-pet-card>
-                </ng-template>
-            </owl-carousel-o>
-        <app-blog-section></app-blog-section>
+</section>
