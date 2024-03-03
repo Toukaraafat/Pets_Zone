@@ -1,1 +1,62 @@
-<p>shop works!</p>
+<section class="inner-header">
+    <figure>
+        <img src="../../assets/images/bg-breadcrumb.jpg" alt="breadcrumb">
+        <figcaption>
+            <h2 class="title display-4">Shop</h2>
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                <ul class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                    <li class="breadcrumb-item active">Shop</li>
+                </ul>
+            </nav>
+        </figcaption>
+    </figure>
+</section>
+<section class="shop p-sm-5 p-4">
+    <div class="row m-0">
+        <div class="col-lg-3 col-md-4">
+            <div class="sidebar">
+                <div class="sidebar-item search-form">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <button class="btn" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+                <div class="sidebar-item">
+                    <h4>Categories</h4>
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-8">
+            <div class="filter-item">
+                <div class="filter-sort">
+                    <span>Sort By</span>
+                    <select id="Options">
+                        <option value="All">All</option>
+                        <option value="highToLow">High To Low</option>
+                        <option value="lowToHigh">Low To High</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-cards row mx-0">
+                <div class="col-lg-3">
+                    <app-product-card></app-product-card>
+                </div>
+                <div class="col-lg-3">
+                    <app-product-card></app-product-card>
+                </div>
+                <div class="col-lg-3">
+                    <app-product-card></app-product-card>
+                </div>
+                <div class="col-lg-3">
+                    <app-product-card></app-product-card>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
