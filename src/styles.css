@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* Add this line to styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
@@ -24,7 +24,6 @@
 
 body {
   font-family: "Amaranth", sans-serif;
-
 }
 p {
   color: #858687;
@@ -54,7 +53,8 @@ a:hover {
   color: #fff;
   border-radius: 0.75rem;
 }
-.btn:focus ,.btn-2:focus{
+.btn:focus,
+.btn-2:focus {
   outline: 0;
   box-shadow: none;
 }
@@ -88,7 +88,7 @@ a:hover {
 .main-color {
   color: #393d72;
 }
-.orange-color{
+.orange-color {
   color: #ffae00;
 }
 ul {
@@ -105,7 +105,7 @@ ul li {
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #ff4880;
 }
-.fixed-btn{
+.fixed-btn {
   position: fixed;
   bottom: 0;
   right: 1%;
@@ -118,7 +118,11 @@ ul li {
   outline: 0;
   box-shadow: none;
 }
-label{
-  color: #393d72!important;
-
+.form-select:focus {
+  border-color: #ff4880;
+  outline: 0;
+  box-shadow: none;
+}
+label {
+  color: #393d72 !important;
 }

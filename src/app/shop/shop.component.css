@@ -53,4 +53,29 @@
   .inner-header figure figcaption .breadcrumb-item + .breadcrumb-item::before {
     color: #fff;
   }
+  .search-form form {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #dee2e6;
+    border-radius: 0.375rem;
+  }
   
+  .search-form form input {
+    outline: none;
+    border: none;
+    color: #00000096;
+    margin: 0;
+    background-color: transparent;
+  }
+  .search-form form button {
+    /* height: 100%; */
+    background: transparent;
+    width: 50px;
+    font-size: 18px;
+    border: none;
+  }
+  .sidebar{
+    background: #f6f0e8;
+    border-radius: 0.5rem;
+    color: #393d72;
+  }
