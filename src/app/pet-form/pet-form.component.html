@@ -1,49 +1,53 @@
 <app-inner-header></app-inner-header>
 <section class="pet-form p-sm-5 p-4">
-    <form action="" method="">
+    <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div>
+    <form enctype="multipart/form-data">
         <div class="row m-0">
             <div class="col-md-6">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="name" id="name">
+                    <input type="text" class="form-control" placeholder="name" id="name" [(ngModel)]="formData.name" name="name">
                     <label for="name">Name</label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Age" id="age">
-                    <label for="name">Age</label>
+                    <input type="text" class="form-control" placeholder="Age" id="age" [(ngModel)]="formData.age" name="age">
+                    <label for="age">Age</label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Animal Type" id="animalType">
-                    <label for="animalType">Animal Type</label>
+                    <input type="text" class="form-control" placeholder="Animal Type" id="animelType" [(ngModel)]="formData.animel_type" name="animel_type">
+                    <label for="animel_type">Animal Type</label>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Gender" id="gender">
+                    <input type="text" class="form-control" placeholder="Gender" id="gender" [(ngModel)]="formData.gender" name="gender">
                     <label for="gender">Gender</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="Address" id="address">
-                    <label for="address">Address</label>
+                    <input type="text" class="form-control" placeholder="Address" id="address" [(ngModel)]="formData.location" name="location">
+                    <label for="location">Address</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="More Info" id="message"></textarea>
-                    <label for="message">More Info</label>
+                    <textarea class="form-control" placeholder="More Info" id="message" [(ngModel)]="formData.disc" name="disc"></textarea>
+                    <label for="disc">More Info</label>
                 </div>
             </div>
             <div class="col-md-12">
                 <label for="image">Upload a pet photo</label>
-                <input type="file" id="image" class="form-control mt-2" name="image" accept="image/png, image/jpeg" />
+                <input type="file" id="image" class="form-control mt-2" name="image"   (change)="onFileSelected($event) " 
+                />
             </div>
             <div class="col-12">
-                <button class="btn mt-4" type="submit">Add Pet</button>
+                <button class="btn mt-4" type="submit" (click)="onSubmit()">Add Pet</button>
               </div>
 
         </div>
