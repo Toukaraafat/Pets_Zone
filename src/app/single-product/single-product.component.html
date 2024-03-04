@@ -1,1 +1,75 @@
-<p>single-product works!</p>
+<section class="inner-header">
+    <figure>
+        <img src="../../assets/images/bg-breadcrumb.jpg" alt="breadcrumb">
+        <figcaption>
+            <h2 class="title display-4">Product Name</h2>
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                <ul class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                    <li class="breadcrumb-item active">Product Name</li>
+                </ul>
+            </nav>
+        </figcaption>
+    </figure>
+</section>
+<section class="product-details p-sm-5 p-4">
+    <div class="row mx-0">
+        <div class="col-lg-6 col-md-6">
+            <div class="product-img">
+                <img src="../../assets/images/dry-food.jpeg" alt="product">
+
+                <!-- <div class="product-details-item-slider">
+                    @for(let image of productImages; let i = $index;){
+                        <img [src]="image.url" (click)="changeMainImage(image.url)">
+                    }
+
+                </div>
+
+                <img class="product-details-item-main-img" [src]="mainImageUrl"> -->
+
+            </div>
+            <!-- <div class="product-img">
+                <img [src]="images[1]" alt="">
+            </div>
+            <div class="product-thumb"> 
+                <img [src]="images[1]" onclick="img('images[1]')">
+                <img [src]="images[2]" onclick="img('images[2]')">
+                <img [src]="images[3]" onclick="img('images[3]')">
+                <img [src]="images[4]" onclick="img('images[4]')">
+            </div> -->
+            <!-- <div class="product-details-item-slider">
+
+              </div>
+              
+              <img class="product-details-item-main-img" [src]="mainImageUrl"> -->
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <h5 class="sec-color">Dry food</h5>
+            <h3 class="main-color">ALPHA Puppies Dry Food 20 Kg
+            </h3>
+            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
+                vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
+                quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
+                    </span>
+                    <strong class="main-color">Ingredients :</strong> Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.
+                </li>
+                <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
+                    </span>
+                    <strong class="main-color">Weight :</strong> 20k.
+
+                </li>
+                <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
+                    </span>
+                    <strong class="main-color">Price :</strong> 1,800.00 EGP
+                </li>
+            </ul>
+            <a routerLink="/cart" class="btn-2">
+                Add to cart
+            </a>
+        </div>
+
+    </div>
+</section>
