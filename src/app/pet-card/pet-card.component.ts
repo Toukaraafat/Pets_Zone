@@ -13,22 +13,22 @@ import { Animal } from '../interface/animal';
   styleUrl: './pet-card.component.css'
 })
 export class PetCardComponent {
-  animals: any[] = [];
+  // animals: any[] = [];
   @Input() animal!: Animal;
 
-  constructor(private animalService: AnimalsService) {}
+  // constructor(private animalService: AnimalsService) {}
   
 
-  ngOnInit(): void {
-    this.animalService.getAnimals().subscribe(
-      (data) => {
-        this.animals = data.animals;  
-      },
-      (error) => {
-        console.error('Error fetching animals:', error);
-      }
-    );
-  }
+  // ngOnInit(): void {
+  //   this.animalService.getAnimals().subscribe(
+  //     (data) => {
+  //       this.animals = data.animals;  
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching animals:', error);
+  //     }
+  //   );
+  // }
 
  
 }

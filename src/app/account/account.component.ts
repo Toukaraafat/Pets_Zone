@@ -5,12 +5,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RouterLink ,RouterLinkActive} from '@angular/router';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
 import { PetCardComponent} from "../pet-card/pet-card.component";
+import { AnimalsService } from '../services/animals.service';
+import { NgFor, NgIf } from '@angular/common';
 @Component({
     selector: 'app-account',
     standalone: true,
     templateUrl: './account.component.html',
     styleUrl: './account.component.css',
-    imports: [RouterLink, RouterLinkActive, BlogCardComponent,PetCardComponent,CarouselModule]
+    imports: [RouterLink, RouterLinkActive, BlogCardComponent,PetCardComponent,CarouselModule,NgFor]
 })
 export class AccountComponent {
 customOptions: OwlOptions = {
@@ -34,4 +36,22 @@ customOptions: OwlOptions = {
     }
   }
 
-}}
+}
+
+
+animals: any[] = [];
+constructor(private animalService: AnimalsService) {}
+
+
+ngOnInit(): void {
+  this.animalService.getAnimals().subscribe(
+    (data) => {
+      this.animals = data.animals;  
+    },
+    (error) => {
+      console.error('Error fetching animals:', error);
+    }
+  );
+}
+
+}
