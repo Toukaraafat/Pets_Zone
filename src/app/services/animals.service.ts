@@ -19,6 +19,16 @@ export class AnimalsService {
       })
     );
   }
+
+  getAnimals(): Observable<any> {
+    const endpoint = `${this.apiUrl}`;
+    return this.http.get(endpoint).pipe(
+      catchError((error) => {
+        console.error('Error creating animal:', error);
+        throw error;
+      })
+    );
+  }
   
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error occurred';
