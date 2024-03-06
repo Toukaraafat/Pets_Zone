@@ -7,7 +7,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 // import { NgModule } from '@angular/core';
 // import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product-card/product-card.component';
+// import { ProductComponent } from './product-card/product-card.component';
 import { CartComponent } from './cart/cart.component';
 
 export const routes: Routes = [
