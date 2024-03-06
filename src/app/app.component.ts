@@ -9,6 +9,7 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 import { ShopSectionComponent } from './shop-section/shop-section.component';
 import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.component';
 import { PopupComponent} from './popup/popup.component';
+import { BlogformComponent} from './blogform/blogform.component';
 import AOS from 'aos';
 AOS.init();
 
@@ -26,6 +27,7 @@ AOS.init();
     ShopSectionComponent,
     SinglePetInfoComponent,
     PopupComponent,
+    BlogformComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
