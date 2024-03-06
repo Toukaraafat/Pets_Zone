@@ -29,7 +29,18 @@ export class AnimalsService {
       })
     );
   }
-  
+  getPetDetails(id: number): Observable<any> {
+    const endpoint = `${this.apiUrl}/new/${id}`;
+    return this.http.get(endpoint).pipe(
+      catchError((error) => {
+        console.error('Error animal:', error);
+        throw error;
+      })
+    );
+  }
+
+
+
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error occurred';
     if (error.error instanceof ErrorEvent) {
