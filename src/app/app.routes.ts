@@ -28,7 +28,7 @@ export const routes: Routes = [
     title: 'register',
   },
   {
-    path: 'singlepet',
+    path: 'singlepet/:id',
     component: SinglePetInfoComponent,
     title: 'singlepet',
   },
