@@ -12,8 +12,8 @@
         </figcaption>
     </figure>
 </section>
-<section class="pet-info p-sm-5 p-4">
-    <div class="row align-items-center m-0 justify-content-center">
+<section class="pet-info p-sm-5 p-4" > 
+     <div class="row align-items-center m-0 justify-content-center"> 
         <div class="col-lg-5 about-img">
             <svg viewBox="0 0 150 150" class="svg-bg">
                 <clipPath id="clippath_65e1cc4d6bf2a">
@@ -27,24 +27,24 @@
                     </path>
                 </g>
                 <g clip-path="url(#clippath_65e1cc4d6bf2a)">
-                    <image xlink:href="../../assets/images/pet.jpg" width="150" height="150"></image>
+                    <image [attr.xlink:href]="getFullImagePath(animal.image)" width="150" height="150"></image>
                 </g>
             </svg>
         </div>
         <div class="col-lg-5">
-            <h3 class="main-color">Animal type</h3>
+            <h3 class="main-color">{{animal.name}}</h3>
             <ul class="list-unstyled ">
                 <li class="mb-3">
-                    <strong class="main-color h5"> Gender <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> Female
+                    <strong class="main-color h5"> Gender <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> {{animal.gender}}
                 </li>
                 <li class="mb-3">
-                    <strong class="main-color h5"> Age <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> 7 month
+                    <strong class="main-color h5"> Age <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> {{ animal.age}} month
                 </li>
                 <li class="mb-3">
-                    <strong class="main-color h5">Address <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> elharan / Giza
+                    <strong class="main-color h5">Address <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> {{animal.location}}
                 </li>
                 <li class="mb-3">
-                    <strong class="main-color h5">Info <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> dog dog dog dog dog dog dog
+                    <strong class="main-color h5">Info <i class="fa fa-paw sec-color" aria-hidden="true"></i></strong> {{animal.disc}}
                 </li>
             </ul>
             <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#app-adopt-modal">
@@ -53,5 +53,5 @@
             <app-popup></app-popup>
 
         </div>
-    </div>
-</section>
+    </div> 
+ </section>

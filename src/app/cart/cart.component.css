@@ -1,0 +1,10 @@
+.item{
+    box-shadow: 3px 1px 18px 0 rgba(0,0,0,.09);
+    background: #fff;
+    border-radius: 15px;
+}
+.item img{
+    height: 175px;
+    width: 100%;
+    object-fit: contain;
+}

@@ -15,6 +15,7 @@ import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.compone
 import { SingleClinicComponent } from './single-clinic/single-clinic.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { SingleProductComponent } from './single-product/single-product.component';
+import { BlogformComponent} from './blogform/blogform.component';
 export const routes: Routes = [
   {
     path: '',
@@ -27,7 +28,7 @@ export const routes: Routes = [
     title: 'register',
   },
   {
-    path: 'singlepet',
+    path: 'singlepet/:id',
     component: SinglePetInfoComponent,
     title: 'singlepet',
   },
@@ -81,6 +82,7 @@ export const routes: Routes = [
     component: SingleBlogComponent,
     title: 'blog',
   },
+  
   {
     path: 'clinic',
     component: SingleClinicComponent,
@@ -93,9 +95,20 @@ export const routes: Routes = [
     title: 'Product',
   },
   {
+    path: 'blogform',
+    component: BlogformComponent,
+    title: 'blogform',
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
+    title: 'cart',
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
