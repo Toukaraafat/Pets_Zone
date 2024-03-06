@@ -1,15 +1,18 @@
 // cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import {CheckoutService} from './checkout.service'
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
+  constructor(private checkoutService: CheckoutService) {}
   private counter: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   counter$ = this.counter.asObservable();
 
   cartItems: any[] = [];
+  counterSubject: any;
 
   addToCart(item: any) {
     this.cartItems.push(item);
@@ -38,4 +41,19 @@ export class CartService {
     const storedCounter = localStorage.getItem('counter');
     return storedCounter ? +storedCounter : 0;
   }
+
+  placeOrder() {
+    // Implement logic to handle order placement, such as sending an API request
+    // // to a server or updating a database
+    // alert('Your order will place to us , wait until shipping and pay in cash');
+
+    // Reset the cart after placing the order
+    this.cartItems = [];
+    this.updateCounter(0);
+    this.checkoutService.showPopup('Your order will place to us , wait until shipping and pay in cash');
+  }
+  updateCounterr(counter: number) {
+    this.counterSubject.next(counter);
+  }
+  
 }
