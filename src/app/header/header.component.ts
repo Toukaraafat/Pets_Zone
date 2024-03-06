@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +9,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
-  isCollapsed = true;
-  cartCount: number = 0;
+export class HeaderComponent implements OnInit{
+  cartCounter: number = 0;
 
-  addToCart() {
-    this.cartCount++;
+  constructor(private cartService: CartService) {}
+
+  ngOnInit() {
+    this.cartService.counter$.subscribe((counter) => {
+      this.cartCounter = counter;
+    });
   }
 }
