@@ -10,5 +10,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent {
   isCollapsed = true;
+  cartCount: number = 0;
 
+  addToCart() {
+    this.cartCount++;
+  }
 }

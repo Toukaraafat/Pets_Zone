@@ -1,1 +1,22 @@
-<p>cart works!</p>
+<!-- <div class="empty" *ngIf="items.length < 1">
+<div class="info">
+<h4>You dont have any items in your cart .</h4>
+<a routerLink="" class="btn justify-content-center"> Start shopping</a>
+</div>
+</div>
+<ng-container *ngIf="items.length > 0">
+    <div class="cart" *ngFor="let item of  items; let i = index">
+        <i class="fa-solid fa-paw sec-color text-bg-danger" aria-hidden="true" (click)="onDelete(i)"></i> 
+        <div class="item my-4 p-4 text-center" data-aos="zoom-in">
+<img src="../../assets/images/product.jpg">
+    <div class="content">
+      <h5 class="py-3 main-color m-0"><a routerLink="/product">Silver Dry Dog Food With Chicken </a></h5>
+        <p class="sec-color">175EG</p>
+      <a routerLink="/cart" class="btn-2">
+        Add to cart
+      </a>
+    </div>
+    <input type="number" class="qty" value="item.qty" (blur)="validateInput($event,i)">
+  </div>
+    </div>
+</ng-container> -->
