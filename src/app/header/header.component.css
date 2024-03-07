@@ -22,3 +22,11 @@ img {
 .active_link {
   color: #ff4880;
 }
+.cart-icon {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin-left: 5px;
+}

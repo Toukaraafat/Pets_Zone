@@ -100,6 +100,11 @@ export const routes: Routes = [
     title: 'blogform',
   },
   {
+    path: 'cart',
+    component: CartComponent,
+    title: 'cart',
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
