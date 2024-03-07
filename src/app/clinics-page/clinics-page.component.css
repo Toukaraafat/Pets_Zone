@@ -72,4 +72,15 @@
   .inner-header figure figcaption .breadcrumb-item + .breadcrumb-item::before {
     color: #fff;
   }
-  
+
+.item {
+  position: relative; 
+  overflow: hidden; 
+  height: 60%; 
+}
+
+.item img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}

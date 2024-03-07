@@ -84,7 +84,7 @@ export const routes: Routes = [
   },
   
   {
-    path: 'clinic',
+    path: 'clinic/:id',
     component: SingleClinicComponent,
     title: 'clinic',
 

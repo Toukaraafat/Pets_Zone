@@ -17,13 +17,13 @@
 
     <div *ngIf="clinics">yes</div>
     @for(clinic of clinics; track clinic.id){
-        <div class="col-lg-2">
-            <div class="item" data-aos="zoom-in">
-                <a routerLink="/clinic" [id]="clinic.id">
-                    <img src="{{clinic.cover}}" alt="#" />
-                </a>
+            <div class="col-lg-2">
+                <div class="item " data-aos="zoom-in">
+                    <a  [routerLink]="['/clinic' , clinic.id]">
+                        <img class="img-fluid " src="{{clinic.cover}}" alt="clinic" />
+                    </a>
+                </div>
             </div>
-        </div>
     }
     
 </div>
