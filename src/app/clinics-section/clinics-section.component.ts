@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink,RouterLinkActive } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-clinics-section',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule,RouterLink,RouterLinkActive],
   templateUrl: './clinics-section.component.html',
   styleUrl: './clinics-section.component.css',
 })

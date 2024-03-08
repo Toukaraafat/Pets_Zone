@@ -9,12 +9,17 @@
         <p class="sec-color">{{ item.price }}EG</p>
 
         <div class="btn-group" role="group">
-          <button class="m-1  btnX " (click)="cartService.removeFromCart(i)">Remove</button>
-          <button class="m-1  btnXX" (click)="cartService.updateQuantity(i, item.quantity + 1)" >+1</button>
+          <button class="m-1 btnX" (click)="cartService.removeFromCart(i); onCartChange()">Remove</button>
+          <button class="m-1 btnXX" (click)="cartService.updateQuantity(i, item.quantity + 1); onCartChange()">+1</button>
           <p class="m-1 text-secondary">{{ item.quantity }}</p>
-          <button class="m-1  btnXX" (click)="cartService.updateQuantity(i, item.quantity - 1)">-1</button>
+          <button class="m-1 btnXX" (click)="cartService.updateQuantity(i, item.quantity - 1); onCartChange()">-1</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="text-center mt-4">
+  <button class="btn btn-primary" (click)="checkout()">Checkout</button>
+</div>
+
+

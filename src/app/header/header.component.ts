@@ -9,7 +9,7 @@ import { CartService } from '../services/cart.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   cartCounter: number = 0;
 
   constructor(private cartService: CartService) {}
