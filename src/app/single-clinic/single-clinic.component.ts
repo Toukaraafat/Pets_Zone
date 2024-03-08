@@ -28,6 +28,15 @@ x: any;
       console.error('Error fetching clinic:', error.message); // Log the error message
     }
   );
+  _clinicsService.getClinics().subscribe(
+    (data: any) => {
+      this.clinics = data;  
+    },
+    (error: any) => {
+      console.error('Error fetching animals:', error);
+    }
+    );
+}
   
   }
 
@@ -44,4 +53,4 @@ x: any;
   //   );
   // }
   
-}
+
