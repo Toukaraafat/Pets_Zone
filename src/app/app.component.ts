@@ -11,6 +11,8 @@ import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.compone
 import { PopupComponent} from './popup/popup.component';
 import { BlogformComponent} from './blogform/blogform.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ShowComponent} from './show/show.component';
+
 import AOS from 'aos';
 AOS.init();
 
@@ -25,6 +27,7 @@ AOS.init();
     RegisterComponent,
     LoginComponent,
     TopHeaderComponent,
+    ShowComponent,
     ShopSectionComponent,
     SinglePetInfoComponent,
     PopupComponent,

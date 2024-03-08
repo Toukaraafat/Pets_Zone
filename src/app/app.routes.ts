@@ -16,6 +16,7 @@ import { SingleClinicComponent } from './single-clinic/single-clinic.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { BlogformComponent} from './blogform/blogform.component';
+import { ShowComponent} from './show/show.component';
 export const routes: Routes = [
   {
     path: '',
@@ -26,6 +27,11 @@ export const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
     title: 'register',
+  },
+  {
+    path: 'show',
+    component: ShowComponent,
+    title: 'show',
   },
   {
     path: 'singlepet/:id',
