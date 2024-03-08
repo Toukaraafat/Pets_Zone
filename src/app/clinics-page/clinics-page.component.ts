@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ClinicsService } from '../services/clinics.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-clinics-page',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,CommonModule],
   templateUrl: './clinics-page.component.html',
   styleUrl: './clinics-page.component.css'
 })
