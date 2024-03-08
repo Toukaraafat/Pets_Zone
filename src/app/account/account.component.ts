@@ -7,6 +7,7 @@ import { BlogCardComponent } from '../blog-card/blog-card.component';
 import { PetCardComponent} from "../pet-card/pet-card.component";
 import { AnimalsService } from '../services/animals.service';
 import { NgFor, NgIf } from '@angular/common';
+import { PostsService } from '../services/posts.service';
 @Component({
     selector: 'app-account',
     standalone: true,
@@ -40,7 +41,9 @@ customOptions: OwlOptions = {
 
 
 animals: any[] = [];
-constructor(private animalService: AnimalsService) {}
+posts: any[] = [];
+
+constructor(private animalService: AnimalsService,private postService: PostsService) {}
 
 
 ngOnInit(): void {
@@ -52,6 +55,21 @@ ngOnInit(): void {
       console.error('Error fetching animals:', error);
     }
   );
+
+  this.postService.getPosts().subscribe(
+    (data) => {
+      this.posts = data.posts;
+      console.log('Received data:', this.posts);
+
+    },
+    (error) => {
+      console.error('Error getting posts:', error);
+    }
+  );
 }
+
+
+
+
 
 }

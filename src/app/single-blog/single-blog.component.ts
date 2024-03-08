@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink,RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
-import { ShowComponent} from '../show/show.component';
 
 @Component({
   selector: 'app-single-blog',
@@ -11,5 +10,41 @@ import { ShowComponent} from '../show/show.component';
   styleUrl: './single-blog.component.css'
 })
 export class SingleBlogComponent {
+
+  @Input() id!: number;
+  posts:Post[] = [];
+  post !: Post;
+
+
+  constructor(private postService: PostsService, private router: Router) {}
+
+
+  getFullImagePath(imagePath: string): string {
+    return `http://127.0.0.1:8000/${imagePath}`;
+}
+
+// ngOnChanges() {
+//   this.postService.getPetpost(this.id).subscribe((res: any) => {
+//     console.log(res);
+//     if (res && res.post) { 
+//       this.post = res.post;
+//     } else {
+//       this.router.navigate(['**']);
+//     }
+//   });
+// }
+
+ngOnInit() {
+  console.log('Current ID:', this.id);
+  this.postService.getPetpost(this.id).subscribe((res: any) => {
+    console.log(res);
+    if (res && res.post) { 
+      this.post = res.post;
+    } else {
+      this.router.navigate(['**']);
+    }
+  });
+}
+
 
 }

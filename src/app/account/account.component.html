@@ -79,8 +79,8 @@
                         <div class="tab-pane fade" id="pills-community" role="tabpanel"
                             aria-labelledby="pills-community-tab" tabindex="0">
                             <div class="row m-0">
-                                <div class="col-md-6" >
-                                    <app-blog-card ></app-blog-card>
+                                <div class="col-md-6" *ngFor="let post of posts" >
+                                    <app-blog-card [post]="post" ></app-blog-card>
                                 </div>
                                 
                             </div>
