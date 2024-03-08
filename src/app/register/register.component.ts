@@ -7,18 +7,31 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive,ReactiveFormsModule],
+  imports: [RouterLink, RouterLinkActive, ReactiveFormsModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit{
   
   error:string = "";
 registerForm: any;
 constructor( private formBuilder: FormBuilder , private _AuthService: AuthService , private _Router:Router){
   this.registerForm = this.formBuilder.group({
-    // Your form controls go here
-});
+    name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', Validators.required],
+    phoneNumber: ['', Validators.required],
+    age: ['', Validators.required],
+    building_number: ['', Validators.required],
+    street: ['', Validators.required],
+    area: ['', Validators.required],
+    city: ['', Validators.required],
+    image: ['', Validators.required],
+    gender: ['', Validators.required],
+    
+ });
+ 
 }
 submitRegisterForm(registerForm:FormGroup)
 {
