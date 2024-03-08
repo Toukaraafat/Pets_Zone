@@ -38,11 +38,13 @@ submitRegisterForm(registerForm:FormGroup)
  this._AuthService.register(registerForm.value).subscribe((response)=>{
  if(response.message == 'success'){
 //done
-this._Router.navigate(['/login']);
+// this._Router.navigate(['/login']);
+console.log('error');
  }
  else{
 //error
-this.error = response.Validator.email.message
+this.error = response.msg.email.message
+// console.log('error');
  }
 })
   
