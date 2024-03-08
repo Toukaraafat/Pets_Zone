@@ -24,8 +24,10 @@
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-
-                <form>
+<div *ngIf='error.length > 0' class="alert alert-danger">
+<p>  {{error}}</p>
+</div>
+                <form [formGroup]='registerForm' (ngsubmit)="submitRegisterForm(registerForm)">
 
                   <div class="d-flex align-items-center mb-3 ">
                     <img src="../../assets/images/logo.png" alt="Logo" style="height: auto; width: 10vw;">
@@ -126,7 +128,7 @@
                   </div>
 
                   <div class="pt-2 mb-1">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Sign Up</button>
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">Sign Up</button>
                   </div>
 
                   <a class="small text-muted" href="#!">Already have an account? 

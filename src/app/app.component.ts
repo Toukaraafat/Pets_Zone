@@ -10,6 +10,7 @@ import { ShopSectionComponent } from './shop-section/shop-section.component';
 import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.component';
 import { PopupComponent} from './popup/popup.component';
 import { BlogformComponent} from './blogform/blogform.component';
+import { HttpClientModule} from '@angular/common/http';
 import AOS from 'aos';
 AOS.init();
 
@@ -28,6 +29,7 @@ AOS.init();
     SinglePetInfoComponent,
     PopupComponent,
     BlogformComponent,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
