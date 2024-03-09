@@ -3,6 +3,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -12,45 +13,52 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 
-export class RegisterComponent implements OnInit{
-  
-  error:string = "";
-registerForm: any;
-constructor( private formBuilder: FormBuilder , private _AuthService: AuthService , private _Router:Router){
-  this.registerForm = this.formBuilder.group({
-    name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
-    phoneNumber: ['', Validators.required],
-    age: ['', Validators.required],
-    building_number: ['', Validators.required],
-    street: ['', Validators.required],
-    area: ['', Validators.required],
-    city: ['', Validators.required],
-    image: ['', Validators.required],
-    gender: ['', Validators.required],
-    
- });
+export class RegistrationComponent  implements OnInit{
  
-}
-submitRegisterForm(registerForm:FormGroup)
-{
- this._AuthService.register(registerForm.value).subscribe((response)=>{
- if(response.message == 'success'){
-//done
-// this._Router.navigate(['/login']);
-console.log('error');
- }
- else{
-//error
-this.error = response.msg.email.message
-// console.log('error');
- }
-})
-  
-}
-  ngOnInit(): void {
-   
-  }
-}
 
+  registerForm!: FormGroup 
+
+  constructor(private authService: AuthService, private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  initForm(): void {
+    this.registerForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', [Validators.required]],
+      street: ['', [Validators.required]],
+      area: ['', [Validators.required]],
+      building_number: [''],
+      phoneNumber: ['', [Validators.required, Validators.minLength(10)]],
+      age: ['', [Validators.required]],
+      gender: ['', [Validators.required]],
+      city: ['Giza', [Validators.required]],
+      image: [null]
+    });
+  }
+
+  submitRegisterForm(): void {
+    if (this.registerForm.valid) {
+      const formData = new FormData();
+      for (const key of Object.keys(this.registerForm.value)) {
+        formData.append(key, this.registerForm.value[key]);
+      }
+
+      this.authService.register(formData).subscribe(
+        (response) => {
+          console.log(response); // Handle success response from your API
+        },
+        (error) => {
+          console.error(error); // Handle error response from your API
+        }
+      );
+    } else {
+      // Form is invalid, handle accordingly (show validation errors, etc.)
+    }
+  }
+
+}
