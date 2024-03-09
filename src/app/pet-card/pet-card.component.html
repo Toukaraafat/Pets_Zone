@@ -17,7 +17,7 @@
       </svg>
      </div> 
       <div class="content">
-        <h3 class="py-3 main-color"><a href="#">{{ animal.name }}</a></h3>
+        <h3 class="py-3 main-color"><a [routerLink]="['/singlepet/', animal.id]" >{{ animal.name }}</a></h3>
         <p>{{ animal.disc }}</p>
         <!-- <a  class="btn" routerLink="/singlepet" routerLinkActive="active_link"
         [routerLinkActiveOptions]="{ exact: true }"   >
