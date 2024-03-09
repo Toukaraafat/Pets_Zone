@@ -25,19 +25,13 @@
                 </select>
             </div>
             <div class="products-cards row mx-0">
+                @if(products){
+                    @for(product of products; track product.id){
                 <div class="col-lg-4">
-                    <app-product-card></app-product-card>
+                    <app-product-card [product]="product"></app-product-card>
                 </div>
-                <div class="col-lg-4">
-                    <app-product-card></app-product-card>
-                </div>
-                <div class="col-lg-4">
-                    <app-product-card></app-product-card>
-                </div>
-                <div class="col-lg-4">
-                    <app-product-card></app-product-card>
-                </div>
-
+    
+            }}
             </div>
         </div>
         <div class="col-lg-3 col-md-4 py-3 sidebar">
@@ -52,8 +46,11 @@
             <div class="sidebar-item categories mt-3 px-2 ">
                 <h4>Product categories</h4>
                 <ul>
+                    @if(categories){
+                        @for(category of categories; track category){
                     <li><a> <i class="fa fa-paw sec-color" aria-hidden="true"></i>
-                            Dry Food</a></li>
+                            {{category.category_name}}</a></li>
+                    }}
                 </ul>
             </div>
         </div>

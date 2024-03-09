@@ -11,25 +11,18 @@
 				</g>
 			</svg>
 		</div>
-		<p class="w-50 text-center m-auto my-3">We offer quick & easy services for both dogs and cat of various breeds. No
+		<p class="w-50 text-center m-auto my-3">We offer quick & easy services for both dogs and cat of various breeds.
+			No
 			matter their
 			size or age, we can provide positive grooming experience.</p>
 	</div>
 	<owl-carousel-o [options]="customOptions" class=" py-3 px-4 ">
-		<ng-template carouselSlide>
-			<app-product-card></app-product-card>
+		@if(products){
+		@for(product of products; track product.id){
+			<ng-template carouselSlide>
+			<app-product-card [product]="product"></app-product-card>
+
 		</ng-template>
-		<ng-template carouselSlide>
-			<app-product-card></app-product-card>
-		</ng-template>
-		<ng-template carouselSlide>
-			<app-product-card></app-product-card>
-		</ng-template>
-		<ng-template carouselSlide class="col-lg-3 col-sm-6">
-			<app-product-card></app-product-card>
-		</ng-template>
-		<ng-template carouselSlide class="col-lg-3 col-sm-6">
-			<app-product-card></app-product-card>
-		</ng-template>
+		}}
 	</owl-carousel-o>
 </section>

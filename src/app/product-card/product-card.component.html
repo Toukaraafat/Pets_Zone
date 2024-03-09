@@ -1,14 +1,17 @@
-<!-- product.component.html -->
+
+
 <div class="item my-4 p-4 text-center" data-aos="zoom-in">
-  <img src="../../assets/images/product.jpg">
+
+  <img src="{{product.image}}">
   <div class="content">
     <h5 class="py-3 main-color m-0">
-      <a routerLink="/product">Silver Dry Dog Food With Chicken </a>
+      <a [routerLink]="['/products/', product.id]" (click)="sendPro()">{{ product.name }}</a>
     </h5>
-    <p class="sec-color">175EG</p>
+    <p class="sec-color">{{ product.price }}</p>
     <div class="col-12">
       <button class="btn mt-4" (click)="addToCart()">Add to cart</button>
     </div>
   </div>
 
 </div>
+
