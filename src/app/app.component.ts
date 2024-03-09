@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
-import { RegisterComponent } from './register/register.component';
+// import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { ShopSectionComponent } from './shop-section/shop-section.component';
@@ -11,7 +11,7 @@ import { SinglePetInfoComponent} from './single-pet-info/single-pet-info.compone
 import { PopupComponent} from './popup/popup.component';
 import { BlogformComponent} from './blogform/blogform.component';
 import { HttpClientModule} from '@angular/common/http';
-import { ShowComponent} from './show/show.component';
+// import { ShowComponent} from './show/show.component';
 
 import AOS from 'aos';
 AOS.init();
@@ -24,10 +24,10 @@ AOS.init();
     HeaderComponent,
     FooterComponent,
     SliderComponent,
-    RegisterComponent,
+    // RegisterComponent,
     LoginComponent,
     TopHeaderComponent,
-    ShowComponent,
+    // ShowComponent,
     ShopSectionComponent,
     SinglePetInfoComponent,
     PopupComponent,
