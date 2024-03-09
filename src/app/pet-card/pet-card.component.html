@@ -2,7 +2,7 @@
    <div class="item my-4 p-4 text-center" data-aos="zoom-in">
       <div class="pet-img">
         <!-- <img src="http://127.0.0.1:8000/{{animal.image}}" class="rounded-circle" alt=""> -->
-        <svg viewBox="0 0 150 150" class="svg-bg">
+        <!-- <svg viewBox="0 0 150 150" class="svg-bg">
           <clipPath id="clippath_65e1cc4d6bf2a">
               <path d="M92.29,0.96c-13.42,0-24.28,2.68-32.87,7.26c-11.16,5.95-22.49,11.6-34.3,16.12C10.49,29.94,0,44.09,0,60.78
           c0,14.97,8.41,27.86,20.65,34.4c14.1,7.54,27.78,15.84,40.45,25.59c7.48,5.75,16.11,9.19,25.45,9.19
@@ -14,7 +14,9 @@
           <g clip-path="url(#clippath_65e1cc4d6bf2a)">
               <image [attr.xlink:href]="getFullImagePath(animal.image)"  class="pet"></image>
           </g>
-      </svg>
+      </svg> -->
+      <img src="{{getFullImagePath(animal.image)}}" alt="{{animal.name}}">
+
      </div> 
       <div class="content">
         <h3 class="py-3 main-color"><a [routerLink]="['/singlepet/', animal.id]" >{{ animal.name }}</a></h3>
