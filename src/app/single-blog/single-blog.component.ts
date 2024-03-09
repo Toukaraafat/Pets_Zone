@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { Router, RouterLink ,RouterLinkActive} from '@angular/router';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
+import { PostsService } from '../services/posts.service';
+import { Post } from '../interface/post';
 
 @Component({
   selector: 'app-single-blog',
   standalone: true,
-  imports: [RouterLink ,BlogCardComponent,RouterLinkActive,ShowComponent],
+  imports: [RouterLink ,BlogCardComponent,RouterLinkActive],
   templateUrl: './single-blog.component.html',
   styleUrl: './single-blog.component.css'
 })
