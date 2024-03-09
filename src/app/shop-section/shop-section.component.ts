@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductService } from '../services/product.service';
+
 @Component({
   selector: 'app-shop-section',
   standalone: true,
@@ -10,6 +12,8 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   styleUrl: './shop-section.component.css'
 })
 export class ShopSectionComponent {
+  constructor(private productService: ProductService) {}
+
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -31,5 +35,12 @@ export class ShopSectionComponent {
       }
     }
   }
+  products: any;
 
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
+      console.log(products);
+    });
+  }
 }

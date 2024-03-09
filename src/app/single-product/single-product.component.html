@@ -2,44 +2,43 @@
     <figure>
         <img src="../../assets/images/bg-breadcrumb.jpg" alt="breadcrumb">
         <figcaption>
-            <h2 class="title display-4">Product Name</h2>
+            <h2 class="title display-4">{{product.product_name}}</h2>
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
                 <ul class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-                    <li class="breadcrumb-item active">Product Name</li>
+                    <li class="breadcrumb-item"><a routerLink="/shop">Shop</a></li>
+                    <li class="breadcrumb-item active">{{product.product_name}}</li>
                 </ul>
             </nav>
         </figcaption>
     </figure>
 </section>
 <section class="product-details p-sm-5 p-4">
-    <div class="row mx-0">
+    <div class="row mx-0 align-items-center">
         <div class="col-lg-6 col-md-6">
             <div class="product-img">
-                <img src="../../assets/images/dry-food.jpeg" alt="product">
+                <img src="{{product.image}}" alt="product">
             </div>
         </div>
         <div class="col-lg-6 col-md-6">
-            <h5 class="sec-color">Dry food</h5>
-            <h3 class="main-color">ALPHA Puppies Dry Food 20 Kg
+            <h5 class="sec-color">{{product.category_name}}</h5>
+            <h3 class="main-color">{{product.product_name}}
             </h3>
-            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
-                vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
-                quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
+            <p>{{product.desc}}</p>
             <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
+                <!-- <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
                     </span>
                     <strong class="main-color">Ingredients :</strong> Lorem ipsum dolor sit amet, consectetur
                     adipisicing elit.
-                </li>
+                </li> -->
                 <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
                     </span>
-                    <strong class="main-color">Weight :</strong> 20k.
+                    <strong class="main-color">Weight :</strong> {{product.weight}}
 
                 </li>
                 <li><span class="fa-li"><i class="fa fa-paw sec-color" aria-hidden="true"></i>
                     </span>
-                    <strong class="main-color">Price :</strong> 1,800.00 EGP
+                    <strong class="main-color">Price :</strong> {{product.price}} EGP
                 </li>
             </ul>
             <div class="col-12">

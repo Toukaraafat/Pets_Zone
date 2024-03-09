@@ -1,17 +1,11 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common';
-
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
-import { PostsService } from '../services/posts.service';
-import { Post } from '../interface/post';
-import { CommentService } from '../services/comment.service';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-single-blog',
   standalone: true,
-  imports: [RouterLink ,BlogCardComponent,RouterLinkActive,FormsModule,NgFor],
+  imports: [RouterLink ,BlogCardComponent,RouterLinkActive,ShowComponent],
   templateUrl: './single-blog.component.html',
   styleUrl: './single-blog.component.css'
 })

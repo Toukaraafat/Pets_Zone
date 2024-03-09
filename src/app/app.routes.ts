@@ -96,7 +96,7 @@ export const routes: Routes = [
 
   },
   {
-    path: 'product',
+    path: 'products/:id',
     component: SingleProductComponent,
     title: 'Product',
   },
