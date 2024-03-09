@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CartService } from '../services/cart.service';
 import { NgIf,NgFor } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './cart.component.css'
 })
 export class CartComponent {
-  constructor(public cartService: CartService , private snackBar: MatSnackBar) {this.updateCartCounter();}
+  constructor(public cartService: CartService , private snackBar: MatSnackBar ,private router: Router) {this.updateCartCounter();}
   cartCounter: number = 0;
 
 
@@ -35,7 +36,7 @@ export class CartComponent {
 
     // Optional: You can display a success message or navigate to a thank you page
     // For example, using Angular Router
-    // this.router.navigate(['/thank-you']);
+    this.router.navigate(['/thank-you']);
   }
  
 

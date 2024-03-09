@@ -1,7 +1,7 @@
-    <div class="event">
-      <a routerLink="/blog">
+    <div class="event" *ngIf="post">
+      <a [routerLink]="['/blog', post.id]">
         <figure>
-          <img src="../../assets/images/slide1.jpg" alt="#" />
+          <img src="http://127.0.0.1:8000/{{post.image}}" alt="#" />
           <figcaption class="date p-2">
             <span class="month">Dec</span><br />
             <span class="day">19</span>
@@ -12,11 +12,11 @@
             How Brand Social Value Will Pay a Part in 2022
           </h4>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum neque corporis recusandae placeat, quia provident cumque. Adipisci eos, perspiciatis voluptatibus optio consequatur, necessitatibus natus laudantium vel delectus ipsam eligendi?
+            {{post.content}}
           </p>
-          <p class="btn">
-            Read More
-          </p>
+        
+            <button class="btn"  (click)="redirectToDetails(post.id)" >Read More</button>
+          
         </div>
       </a>
     </div>

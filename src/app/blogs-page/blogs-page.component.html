@@ -13,8 +13,8 @@
     </figure>
 </section>
 <div class="p-sm-5 p-4">
-        <div class="col-lg-4 col-md-6 pt-4" data-aos="zoom-in">
-            <app-blog-card></app-blog-card>
+        <div class="col-lg-4 col-md-6 pt-4" data-aos="zoom-in"  *ngFor="let post of posts">
+            <app-blog-card  [post]="post" ></app-blog-card>
     </div> 
     
 </div>

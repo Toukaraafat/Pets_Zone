@@ -78,7 +78,7 @@ export const routes: Routes = [
     title: 'Pet-info',
   },
   {
-    path: 'blog',
+    path: 'blog/:id',
     component: SingleBlogComponent,
     title: 'blog',
   },
