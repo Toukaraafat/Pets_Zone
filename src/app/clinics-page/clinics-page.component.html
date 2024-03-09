@@ -13,17 +13,20 @@
     </figure>
 </section>
 <section class="p-sm-5 p-4">
-<div class="row m-0">
+<div class="row m-0" *ngIf="clinics">
 
-    <div *ngIf="clinics">yes</div>
+<<<<<<< HEAD
+=======
+    <!-- <div *ngIf="clinics">yes</div> -->
+>>>>>>> e0e2ff919221b9a99d61e6452e9366403118a208
     @for(clinic of clinics; track clinic.id){
-        <div class="col-lg-2">
-            <div class="item" data-aos="zoom-in">
-                <a routerLink="/clinic" [id]="clinic.id">
-                    <img src="{{clinic.cover}}" alt="#" />
-                </a>
+            <div class="col-lg-2">
+                <div class="item " data-aos="zoom-in">
+                    <a  [routerLink]="['/clinic' , clinic.id]">
+                        <img class="img-fluid " src="{{clinic.cover}}" alt="clinic" />
+                    </a>
+                </div>
             </div>
-        </div>
     }
     
 </div>

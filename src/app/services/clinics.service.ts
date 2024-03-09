@@ -23,4 +23,9 @@ export class ClinicsService {
     const url: string = this.baseUrl + id;
     return this.http.get(url);
   }
+  getSingleClinic(x:string): Observable<any> {
+
+  return this.http.get(`http://127.0.0.1:8000/api/clinics/${x}`)
+}
+
 }

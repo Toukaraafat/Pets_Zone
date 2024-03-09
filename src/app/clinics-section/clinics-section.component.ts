@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink,RouterLinkActive } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ClinicsService} from '../services/clinics.service'
 @Component({
   selector: 'app-clinics-section',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [RouterLink,RouterLinkActive,CarouselModule],
   templateUrl: './clinics-section.component.html',
   styleUrl: './clinics-section.component.css',
 })
@@ -30,4 +32,18 @@ export class ClinicsSectionComponent {
       },
     },
   };
+  clinics: any[] = [];
+
+  constructor (private clinicService: ClinicsService) {}
+
+  ngOnInit(): void {
+    this.clinicService.getClinics().subscribe(
+      (data: any) => {
+        this.clinics = data;  
+      },
+      (error: any) => {
+        console.error('Error fetching animals:', error);
+      }
+      );
+  }
 }
