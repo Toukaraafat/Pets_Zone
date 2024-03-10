@@ -13,10 +13,11 @@
     </figure>
 </section>
 <div class="p-sm-5 p-4">
-        <div class="col-lg-4 col-md-6 pt-4" data-aos="zoom-in"  *ngFor="let post of posts">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 pt-4" data-aos="zoom-in" *ngFor="let post of posts">
             <app-blog-card  [post]="post" ></app-blog-card>
     </div> 
-    
+    </div>
 </div>
-<a routerLink="/blogform"class="btn fixed-btn" download="" style="margin-right: 15%;">
+<a routerLink="/blogform"class="btn fixed-btn" download="" style="margin-right: 15%;" (click)="add()">
     Add your blog</a>

@@ -24,41 +24,157 @@
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
-                  <div class="d-flex align-items-center mb-3">
+                
+                <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+
+                  <div class="d-flex align-items-center mb-3 ">
                     <img src="../../assets/images/logo.png" alt="Logo" style="height: auto; width: 10vw;">
                   </div>
-                
+
                   <div class="row g-2">
                     <div class="col-md">
                       <div class="form-outline">
-                        <input type="text" class="form-control form-control-md mb-3" placeholder="User name" formControlName="name" />
+                        <!-- <label class="form-label">First Name</label> -->
+                        @if(name.invalid && name.touched){
+                          @if(name.errors?.['required']){
+                          <div style="margin-top: 0;" class="text-danger text-end" role="alert">
+                            Username is Required *
+                          </div>
+                          }@else if (name.errors?.['pattern']) {
+                          <div style="margin-top: 0;" class="text-danger  text-end" role="alert">
+                            Invalid name
+                        </div>
+                          }
+                          } 
+                        <input type="text" class="form-control form-control-md mb-3" pattern="^[a-z]+[a-z]$" name="name" #name="ngModel"  ngModel required  placeholder="User name" />
+
                       </div>
                     </div>
                     <div class="col-md">
                       <div class="form-outline">
-                        <input type="email" class="form-control form-control-md mb-3" placeholder="Email" formControlName="email" />
+                        <!-- <label class="form-label">Last Name</label> -->
+                        @if(email.invalid && email.touched){
+                          @if(email.errors?.['required']){
+                          <div style="margin-top: 0;" class="text-danger text-end" role="alert">
+                            Email is Required *
+                          </div>
+                          }@else if (email.errors?.['pattern']) {
+                          <div style="margin-top: 0;" class="text-danger text-end" role="alert">
+                            Invalid Email
+                          </div>
+                          }
+                          }
+                        <input type="email" class="form-control form-control-md mb-3"  name="email" #email="ngModel"  ngModel required 
+                        placeholder="Email"  pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,4}$"  />
+
                       </div>
                     </div>
                   </div>
+
+                  <!-- <div class="form-outline mb-3"> -->
+                    <!-- <label class="form-label">Email address</label> -->
+                    <!-- <input type="email" class="form-control form-control-md" placeholder="Email"/>
+                  </div> -->
+                 
+
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-outline mb-1">
+                        <!-- <label class="form-label">Confirm Password</label> -->
+                        @if(password.invalid && password.touched){
+                          @if(password.errors?.['required']){
+                          <div style="margin-top: 0px;" class="text-danger text-end" role="alert">
+                            Password Is Required *
+                          </div>
+                          }@else if (password.errors?.['minlength']) {
+                          <div style="margin-top: 0;" class="text-danger text-end" role="alert">
+                            Minlength Is 8 Character
+                          </div>
+                          }
+                          }
+                        <input type="password" class="form-control form-control-md mb-3" placeholder="Password" name="password" #password="ngModel"  ngModel />
+          
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-outline">
+                        <!-- <label class="form-label">Last Name</label> -->
+                        <input type="text" class="form-control form-control-md mb-3" placeholder="phone number"    name="phoneNumber" #phoneNumber="ngModel"  ngModel/>
+                      </div>
+                    </div>
                 
-                  <!-- Repeat similar blocks for other form controls -->
-                
-                  <div *ngIf="registerForm.get('name').hasError('required')">
-                    User name is required.
                   </div>
+
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-outline mb-1">
+                        <!-- <label class="form-label" for="form2Example27">Password</label> -->
+                        <input type="text" id="form2Example27" class="form-control form-control-md mb-3" placeholder="Age" name="age" #age="ngModel"  ngModel />
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-outline">
+                        <!-- <label class="form-label">First Name</label> -->
+                        <input type="text" class="form-control form-control-md mb-3" placeholder="building number" name="building_number" #building_number="ngModel"  ngModel/>
+                      </div>
+                    </div>
+                   
+                    
+                  </div>
+
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-outline">
+                        <!-- <label class="form-label">First Name</label> -->
+                        <input type="text" class="form-control form-control-md mb-3" placeholder="street"  name="street" #street ="ngModel"  ngModel/>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-outline">
+                        <!-- <label class="form-label">Last Name</label> -->
+                        <input type="text" class="form-control form-control-md mb-3" placeholder="area" name="area" #area ="ngModel"  ngModel />
+                      </div>
+                    </div>
+                  </div>
+
+                 
+                    <div class="col-md-12">
+                      <div class="col-md">
+                        <div class="form-outline mb-1">
+                          <input type="text" class="form-control form-control-md mb-3" placeholder=" city" name="city" #city="ngModel"  ngModel/>
+                        </div>
                 
-                  <!-- Repeat similar blocks for other validation messages -->
-                
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <input type="file" id="image" class="form-control mt-2" name="image" #image="ngModel"  ngModel />
+                  </div>
+                  <div class="col-md">
+                    <div class="form-outline mb-1">
+                     
+                        <input class="form-check-input" type="radio" id="maleRadio" value="male" name="gender" #gender="ngModel"  ngModel> &nbsp;
+                        <label class="form-check-label" for="maleRadio">Male</label> &nbsp;
+                      
+                    
+                        <input class="form-check-input" type="radio" id="femaleRadio" value="female" name="gender" #gender="ngModel"  ngModel> &nbsp;
+                        <label class="form-check-label" for="femaleRadio">Female</label> 
+                    
+                    </div>
+                  </div>
+                  <div class="form-outline mb-1">
+                    <input type="password" class="form-control form-control-md mb-3" placeholder="confirm Password" name="password_confirmation" #password_confirmation="ngModel"  ngModel />
+                  </div>
+                  </div>
+
                   <div class="pt-2 mb-1">
-                    <button class="btn btn-dark btn-lg btn-block" type="submit">Sign Up</button>
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">Sign Up </button>
                   </div>
-                
+
                   <a class="small text-muted" href="#!">Already have an account? 
                     <a routerLink="/login" routerLinkActive="active_link"
-                      [routerLinkActiveOptions]="{ exact: true }"
-                      style="color: #ff4880;">Login Here</a>
-                  </a>
+                    [routerLinkActiveOptions]="{ exact: true }"
+                      style="color: #ff4880;">Login Here</a></a>
+                  
                 </form>
 
 

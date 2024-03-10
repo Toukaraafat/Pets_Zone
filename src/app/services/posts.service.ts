@@ -30,6 +30,16 @@ export class PostsService {
     );
   }
 
+  getuserPosts(): Observable<any> {
+    const endpoint = `${this.apiUrl}/user`;
+    return this.http.get(endpoint).pipe(
+      catchError((error) => {
+        console.error('Error getting posts:', error);
+        throw error;
+      })
+    );
+  }
+
   getPetpost(id: number): Observable<any> {
     const endpoint = `${this.apiUrl}/${id}`;
     return this.http.get(endpoint).pipe(

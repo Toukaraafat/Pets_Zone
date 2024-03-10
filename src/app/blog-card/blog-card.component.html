@@ -2,18 +2,17 @@
       <a [routerLink]="['/blog', post.id]">
         <figure>
           <img src="http://127.0.0.1:8000/{{post.image}}" alt="#" />
-          <figcaption class="date p-2">
+          <!-- <figcaption class="date p-2">
             <span class="month">Dec</span><br />
             <span class="day">19</span>
-          </figcaption>
+          </figcaption> -->
         </figure>
         <div class="figcaption p-3 text-center">
           <h4 class="event-title my-3">
-            How Brand Social Value Will Pay a Part in 2022
-          </h4>
-          <p>
             {{post.content}}
-          </p>
+
+          </h4>
+         
         
             <button class="btn"  (click)="redirectToDetails(post.id)" >Read More</button>
           

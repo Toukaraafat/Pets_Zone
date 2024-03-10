@@ -10,6 +10,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { LoginService } from './services/login.service';
 
 export const appConfig: ApplicationConfig = {
   
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
     provideHttpClient(withFetch()),
     DatePipe,
-    provideAnimations(), provideAnimationsAsync()
+    provideAnimations(), provideAnimationsAsync(),
+    LoginService,
 ],
 };

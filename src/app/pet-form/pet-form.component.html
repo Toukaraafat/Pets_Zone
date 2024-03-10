@@ -47,7 +47,7 @@
                 />
             </div>
             <div class="col-12">
-                <button class="btn mt-4" type="submit" (click)="onSubmit()">Add Pet</button>
+                <button class="btn mt-4" type="submit" (click)="onSubmit()" *ngIf="isLoggedIn()">Add Pet</button>
               </div>
 
         </div>

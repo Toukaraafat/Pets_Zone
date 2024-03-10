@@ -1,64 +1,51 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { AuthService } from '../services/auth.service';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgForm} from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+ import {catchError, throwError } from 'rxjs';
+import { HttpClient ,HttpErrorResponse} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, ReactiveFormsModule],
+  imports: [RouterLink, RouterLinkActive, ReactiveFormsModule, CommonModule,FormsModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 
-export class RegistrationComponent  implements OnInit{
- 
+export class  RegisterComponent {
+  errors: any = [];
 
-  registerForm!: FormGroup 
-
-  constructor(private authService: AuthService, private fb: FormBuilder) {}
-
-  ngOnInit(): void {
-    this.initForm();
-  }
-
-  initForm(): void {
-    this.registerForm = this.fb.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', [Validators.required]],
-      street: ['', [Validators.required]],
-      area: ['', [Validators.required]],
-      building_number: [''],
-      phoneNumber: ['', [Validators.required, Validators.minLength(10)]],
-      age: ['', [Validators.required]],
-      gender: ['', [Validators.required]],
-      city: ['Giza', [Validators.required]],
-      image: [null]
-    });
-  }
-
-  submitRegisterForm(): void {
-    if (this.registerForm.valid) {
-      const formData = new FormData();
-      for (const key of Object.keys(this.registerForm.value)) {
-        formData.append(key, this.registerForm.value[key]);
-      }
-
-      this.authService.register(formData).subscribe(
-        (response) => {
-          console.log(response); // Handle success response from your API
+  constructor(private http: HttpClient, private router: Router) {}
+  
+  onSubmit(myForm: NgForm) {
+  
+    const formData = { ...myForm.value };
+    console.log(formData);
+    this.http.post('http://127.0.0.1:8000/api/register', formData)
+      .subscribe(
+        (response: any) => {
+          console.log('Signup successful:', response);
+          this.router.navigate(['/login'])
         },
-        (error) => {
-          console.error(error); // Handle error response from your API
-        }
+        catchError((error) => {
+          console.error('Error creating user:', error);
+          throw error;
+        })
+       
       );
-    } else {
-      // Form is invalid, handle accordingly (show validation errors, etc.)
-    }
   }
+  private handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Unknown error occurred';
+    if (error.error instanceof ErrorEvent) {
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    console.error(errorMessage);
+    return throwError(errorMessage);
+  };
+
 
 }
