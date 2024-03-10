@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AnimalsService } from '../services/animals.service';
 import { NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class PetFormComponent {
   formData: any = {}; 
   successMessage: string | undefined;
   
-  constructor(private animalService: AnimalsService,private router: Router) {}
+  constructor(private animalService: AnimalsService,private router: Router,private auth:LoginService) {}
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] as File;
@@ -72,6 +73,10 @@ export class PetFormComponent {
       image: null,
     };
     this.selectedFile = null;
+  }
+
+  isLoggedIn(){
+    return this.auth.canActivate;
   }
 
 }

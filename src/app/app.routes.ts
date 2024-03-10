@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { RegistrationComponent } from './register/register.component';
+
+import { RegisterComponent } from './register/register.component';
+
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { AccountComponent } from './account/account.component';
@@ -16,6 +18,7 @@ import { SingleClinicComponent } from './single-clinic/single-clinic.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { BlogformComponent} from './blogform/blogform.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -24,9 +27,11 @@ export const routes: Routes = [
   },
   {
     path: 'register',
-    component: RegistrationComponent,
+
+    component: RegisterComponent,
     title: 'register',
   },
+
 
   {
     path: 'singlepet/:id',

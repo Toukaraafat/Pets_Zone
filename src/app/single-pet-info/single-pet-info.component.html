@@ -7,6 +7,7 @@
                 <ul class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
                     <li class="breadcrumb-item"><a routerLink="/pets">Pets Adoption</a></li>
+
                     <li class="breadcrumb-item active">{{animal.name}}</li>
                 </ul>
             </nav>
@@ -14,7 +15,10 @@
     </figure>
 </section>
 <section class="pet-info p-sm-5 p-4" > 
-     <div class="row align-items-center m-0 justify-content-between"> 
+     <div class="row align-items-center m-0 justify-content-center"> 
+        <div class="col-lg-5 about-img">
+            <img src="{{getFullImagePath(animal.image)}}" alt="{{animal.name}}">
+    <div class="row align-items-center m-0 justify-content-between"> 
         <div class="offset-1 col-lg-5 about-img">
             <!-- <svg viewBox="0 0 150 150" class="svg-bg">
                 <clipPath id="clippath_65e1cc4d6bf2a">
@@ -30,6 +34,9 @@
                 <g clip-path="url(#clippath_65e1cc4d6bf2a)">
                     <image [attr.xlink:href]="getFullImagePath(animal.image)" width="150" height="150"></image>
                 </g>
+
+            </svg> -->
+
 
             </svg> -->
                          <img src="{{getFullImagePath(animal.image)}}" alt="{{animal.name}}">
