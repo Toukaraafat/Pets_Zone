@@ -1,7 +1,7 @@
 // cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable,catchError, throwError } from 'rxjs';
 import {CheckoutService} from './checkout.service'
 
@@ -20,12 +20,27 @@ export class CartService {
   cartItems: any[] = []
   counterSubject: any;
 
-  addToCart(cartItem: any) : Observable<any>{
-    const url: string = this.baseUrl + "add";
-    console.log(url);
-    console.log(cartItem);
+  private getHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token');
 
-    return this.http.post(url, cartItem);
+    // Check if the token exists before setting the header
+    if (token) {
+        return new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    }
+
+    // If the token is not present, return headers without Authorization
+    return new HttpHeaders();
+  }
+
+  addToCart(item: any) : Observable<any>{
+    this.cartItems.push(item);
+    this.updateCounter(this.cartItems.length);
+    const url: string = this.baseUrl + "add";
+    // console.log(url);
+    // console.log(cartItem);
+
+    console.log({ headers: this.getHeaders() });
+    return this.http.post(url, item, { headers: this.getHeaders() });
   }
 
   removeFromCart(index: number) {
