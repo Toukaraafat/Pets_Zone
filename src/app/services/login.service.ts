@@ -20,7 +20,7 @@ export class LoginService {
     );
   }
 
-
+ 
   canActivate(): Observable<boolean> | boolean {
     return this.isAuthenticated() || this.redirectToLogin();
   }

@@ -37,9 +37,20 @@ createAnimal(animalData: any): Observable<any> {
       })
   );
 }
+
+getUser(): Observable<any> {
+  const endpoint = `http://127.0.0.1:8000/api/user`;
+  return this.http.get(endpoint,{ headers: this.getHeaders() }).pipe(
+    catchError((error) => {
+      console.error('Error creating user:', error);
+      throw error;
+    })
+  );
+}
+
   getAnimals(): Observable<any> {
     const endpoint = `${this.apiUrl}`;
-    return this.http.get(endpoint,{ headers: this.getHeaders() }).pipe(
+    return this.http.get(endpoint).pipe(
       catchError((error) => {
         console.error('Error creating animal:', error);
         throw error;

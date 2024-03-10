@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable,catchError, throwError } from 'rxjs';
 
@@ -9,6 +9,19 @@ export class PostsService {
 
   private apiUrl = 'http://127.0.0.1:8000/api/posts';
   constructor(private http: HttpClient) {}
+
+
+  private getHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token');
+
+    // Check if the token exists before setting the header
+    if (token) {
+        return new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    }
+
+    // If the token is not present, return headers without Authorization
+    return new HttpHeaders();
+}
 
   createPost(post: any): Observable<any> {
     const endpoint = `${this.apiUrl}`;
