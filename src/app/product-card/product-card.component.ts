@@ -14,16 +14,28 @@ import { ShopSectionComponent } from '../shop-section/shop-section.component';
 export class ProductCardComponent implements OnInit{
   constructor(private cartService: CartService ,private productService: ProductService) {}
 
+  // addToCart() {
+  //   const newItem = {
+  //     name: 'Silver Dry Dog Food With Chicken',
+  //     price: 175,
+  //     quantity: 1,
+  //     image: '../../assets/images/product.jpg', // Adjust the image path accordingly
+  //     style: 'your-custom-styles-here', // Add your custom styles here
+  //   };
+  //   this.cartService.addToCart(newItem);
+  // }  
   addToCart() {
     const newItem = {
-      name: 'Silver Dry Dog Food With Chicken',
-      price: 175,
+      product_id: this.product.id,
+      name: this.product.name,
+      price: this.product.price,
       quantity: 1,
-      image: '../../assets/images/product.jpg', // Adjust the image path accordingly
+      image: this.product.image, // Adjust the image path accordingly
       style: 'your-custom-styles-here', // Add your custom styles here
     };
     this.cartService.addToCart(newItem);
-  }  products: any;
+  }  
+  products: any;
 
   @Output() emitProduct: EventEmitter<any> = new EventEmitter();
 

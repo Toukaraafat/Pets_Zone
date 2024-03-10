@@ -1,22 +1,31 @@
 // cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable,catchError, throwError } from 'rxjs';
 import {CheckoutService} from './checkout.service'
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  constructor(private checkoutService: CheckoutService) {}
+  private baseUrl: string = 'http://127.0.0.1:8000/api/carts/';
+
+  // constructor(private http: HttpClient) { }
+
+  constructor(private checkoutService: CheckoutService, private http: HttpClient) {}
   private counter: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   counter$ = this.counter.asObservable();
 
-  cartItems: any[] = [];
+  cartItems: any[] = []
   counterSubject: any;
 
-  addToCart(item: any) {
-    this.cartItems.push(item);
-    this.updateCounter(this.cartItems.length);
+  addToCart(cartItem: any) : Observable<any>{
+    const url: string = this.baseUrl + "add";
+    console.log(url);
+    console.log(cartItem);
+
+    return this.http.post(url, cartItem);
   }
 
   removeFromCart(index: number) {
@@ -37,11 +46,6 @@ export class CartService {
     return this.cartItems;
   }
   
-  getCounterFromLocalStorage(): number {
-    const storedCounter = localStorage.getItem('counter');
-    return storedCounter ? +storedCounter : 0;
-  }
-
   placeOrder() {
     // Implement logic to handle order placement, such as sending an API request
     // // to a server or updating a database
@@ -55,5 +59,10 @@ export class CartService {
   updateCounterr(counter: number) {
     this.counterSubject.next(counter);
   }
+  getCounterFromLocalStorage(): number {
+    const storedCounter = localStorage.getItem('counter');
+    return storedCounter ? +storedCounter : 0;
+  }
+
   
 }
