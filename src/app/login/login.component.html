@@ -25,7 +25,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form>
+                <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
 
                   <div class="d-flex align-items-center mb-3 ">
                     <img src="../../assets/images/logo.png" alt="Logo" style="height: auto; width: 10vw;">
@@ -34,17 +34,17 @@
                   <div class="form-outline mb-1">
                     <!-- <label class="form-label">Email address</label> -->
                     
-                    <input type="email" class="form-control form-control-md mb-3" placeholder="Email" />
+                    <input type="email"  name="email" #email="ngModel"  ngModel required class="form-control form-control-md mb-3" placeholder="Email"  />
                   </div>
 
                   <div class="form-outline mb-1">
                     <!-- <label class="form-label" for="form2Example27">Password</label> -->
                     
-                    <input type="password" id="form2Example27" class="form-control form-control-md mb-3" placeholder="Password"/>
+                    <input type="password" id="form2Example27" name="password"  ngModel required #password="ngModel" class="form-control form-control-md mb-3" placeholder="Password"/>
                   </div>
 
                   <div class="pt-2 mb-3">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
                   </div>
 
                   <a class="small text-muted mb-3" href="#!">Forgot password?</a>

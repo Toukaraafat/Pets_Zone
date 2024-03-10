@@ -47,7 +47,7 @@ constructor(private animalService: AnimalsService,private postService: PostsServ
 
 
 ngOnInit(): void {
-  this.animalService.getAnimals().subscribe(
+  this.animalService.getuserAnimals().subscribe(
     (data) => {
       this.animals = data.animals;  
     },
@@ -56,7 +56,7 @@ ngOnInit(): void {
     }
   );
 
-  this.postService.getPosts().subscribe(
+  this.postService.getuserPosts().subscribe(
     (data) => {
       this.posts = data.posts;
       console.log('Received data:', this.posts);
@@ -67,8 +67,6 @@ ngOnInit(): void {
     }
   );
 }
-
-
 
 
 

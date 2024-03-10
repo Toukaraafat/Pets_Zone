@@ -5,6 +5,7 @@ import { RouterLink ,RouterLinkActive} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PostsService } from '../services/posts.service';
+import { LoginService } from '../services/login.service';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class BlogformComponent {
   formData: any = {}; 
   successMessage: string | undefined;
   
-  constructor(private postService: PostsService,private router: Router) {}
+  constructor(private postService: PostsService,private router: Router,private auth:LoginService) {}
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] as File;
@@ -63,5 +64,7 @@ export class BlogformComponent {
     };
     this.selectedFile = null;
   }
+
+ 
 
 }

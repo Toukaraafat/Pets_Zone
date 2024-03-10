@@ -1,16 +1,41 @@
-.pet-img .svg-bg {
-    height: 170px;
-}
-.pet{
-    width: 150px;
-    height: 150px;
+/* .pet-img .svg-bg {
+    height: 200px;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+} */
+img{
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    transition: 0.2s linear ;
 }
 .item{
     box-shadow: 3px 1px 18px 0 rgba(0,0,0,.09);
     background: #fff;
     border-radius: 15px;
 }
+.item:hover img{
+ transform: scale(1.08);
+}
+.pet-img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 50%;
+  
+    overflow: hidden;
+    margin: auto;
+
+}
 /* img{
     height: 25vh;
     width: 11vw;
+} */
+/* .pet-img{
+    position: relative;
+    height: 170px;
 } */

@@ -29,21 +29,26 @@
           <a class="nav-link mx-2" routerLink="/clinics" routerLinkActive="active_link"
           [routerLinkActiveOptions]="{ exact: true }">Clinics</a>
         </li>
-        <li class="nav-item ">
+        <li *ngIf="!auth.isAuthenticated()" class="nav-item">
           <a class="nav-link mx-2" routerLink="/register" routerLinkActive="active_link"
-          [routerLinkActiveOptions]="{ exact: true }">SignUp</a>
+             [routerLinkActiveOptions]="{ exact: true }">SignUp</a>
+        </li>
+
+        <li *ngIf="auth.isAuthenticated()" class="nav-item">
+          <a class="nav-link mx-2" (click)="logout()"  routerLink="/login" routerLinkActive="active_link"
+          [routerLinkActiveOptions]="{ exact: true }">Logout</a>
         </li>
 
       </ul>
       <a class="nav-link mx-2" routerLink="/cart" routerLinkActive="active_link" [routerLinkActiveOptions]="{ exact: true }">
         <i class="fa-solid fa-paw sec-color"></i> Cart <span class="cart-icon">{{ cartCounter }}</span>
       </a>
-      <a class="nav-link mx-2 " routerLink="/account" routerLinkActive="active_link"
+      <a *ngIf="auth.isAuthenticated()" class="nav-link mx-2" routerLink="/account" routerLinkActive="active_link"
       [routerLinkActiveOptions]="{ exact: true }">
-        <i class="fa-solid fa-circle-user me-1 sec-color"></i> Account
-      </a>
+      <i class="fa-solid fa-circle-user me-1 sec-color"></i> Account
+       </a>
     </div>
   </div>
 </nav>
-<a routerLink="/pet-form"class="btn fixed-btn" download="">
+<a  routerLink="/pet-form"class="btn fixed-btn" download="" (click)="add()">
   Add your pet</a>
