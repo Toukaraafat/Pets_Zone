@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+
 import { RegisterComponent } from './register/register.component';
+
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { AccountComponent } from './account/account.component';
@@ -25,9 +27,12 @@ export const routes: Routes = [
   },
   {
     path: 'register',
+
     component: RegisterComponent,
     title: 'register',
   },
+
+
   {
     path: 'singlepet/:id',
     component: SinglePetInfoComponent,

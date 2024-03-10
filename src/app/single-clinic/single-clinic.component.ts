@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ClinicsService } from '../services/clinics.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-single-clinic',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './single-clinic.component.html',
   styleUrl: './single-clinic.component.css'
 })
