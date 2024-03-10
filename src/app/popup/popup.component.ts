@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { AnimalsService } from '../services/animals.service';
 
 @Component({
   selector: 'app-popup',
@@ -8,9 +9,22 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./popup.component.css']
 })
 export class PopupComponent implements OnInit {
-  constructor() { }
+  user: any;
+
+  constructor(private animalService: AnimalsService){}
 
   ngOnInit(): void {
+
+    this.animalService.getUser().subscribe(
+      (data) => {
+        console.log(data);
+        this.user = data;
+      },
+      (error) => {
+        console.error('Error loading user data:', error);
+      }
+    );
+
   }
 }
 

@@ -42,6 +42,7 @@ customOptions: OwlOptions = {
 
 animals: any[] = [];
 posts: any[] = [];
+  user: any;
 
 constructor(private animalService: AnimalsService,private postService: PostsService) {}
 
@@ -64,6 +65,17 @@ ngOnInit(): void {
     },
     (error) => {
       console.error('Error getting posts:', error);
+    }
+  );
+
+
+  this.animalService.getUser().subscribe(
+    (data) => {
+      console.log(data);
+      this.user = data;
+    },
+    (error) => {
+      console.error('Error loading user data:', error);
     }
   );
 }
