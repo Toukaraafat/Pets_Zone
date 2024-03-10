@@ -19,6 +19,7 @@ import { NgFor, NgIf } from '@angular/common';
 export class PetsSectionComponent {
   
   customOptions: OwlOptions = {
+    items: 4,
     loop: true,
     autoplay: true,
     dots: true,
